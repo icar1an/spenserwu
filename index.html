@@ -1415,14 +1415,12 @@
 
                     <p><b>writing</b></p>
                     <p>
-                        <a href="#" contenteditable="false">some thoughts on x</a> (jan 2025)<br>
-                        <a href="#" contenteditable="false">first post</a> (dec 2024)<br>
-                        <a href="#daymare" contenteditable="false">daymare</a> (oct 2021)
+                        <a href="#daymare" id="daymareLink" contenteditable="false">daymare</a> (oct 2021)
                     </p>
 
                     <p></p>
 
-                    <div id="daymare">
+                    <div id="daymare" style="display: none;">
                         <p><b>daymare</b></p>
 
                         <p>I open my eyes and find myself in the heart of a rolling grassland. The landscape is dotted with tufts of colorful wildflowers, under a blue sky filled with sheets of soft clouds. From a distance, a herd of wild horses gallops in my direction. Suddenly, an unsettling tremor ripples through the ground. Before I can react, the earth splits open beneath my feet. I'm swallowed by the resulting abyss, my bones shatter, and my vision goes dark.</p>
@@ -1686,10 +1684,10 @@
                     showToast('Listening... (not really)');
                     break;
                 case 'preferences':
-                    showToast('Preferences: Just vibe');
+                    showToast('Preferences: vibes');
                     break;
                 case 'getaddons':
-                    showToast('The only add-on you need is going outside');
+                    showToast('Going outside is the only add-on you need');
                     break;
                 case 'shortcuts':
                     showToast('Try the Konami code');
@@ -1698,7 +1696,7 @@
                     showToast('New: This website now exists');
                     break;
                 case 'existential':
-                    showToast('To make things on the internet, apparently');
+                    showToast('To make things on the internet!');
                     break;
                 case 'fullscreen':
                     if (document.fullscreenElement) {
@@ -1784,6 +1782,17 @@
         // Comment click
         document.getElementById('comment').addEventListener('click', () => {
             showToast('Resolve comment? (You can\'t escape your own thoughts)');
+        });
+
+        // Daymare toggle
+        document.getElementById('daymareLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            const daymare = document.getElementById('daymare');
+            const isHidden = daymare.style.display === 'none';
+            daymare.style.display = isHidden ? 'block' : 'none';
+            if (isHidden) {
+                daymare.scrollIntoView({ behavior: 'smooth' });
+            }
         });
 
         // Doc icon clicks
