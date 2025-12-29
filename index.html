@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spenser Wu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col items-center justify-center p-6 selection:bg-indigo-100 selection:text-indigo-700">
+    
+    <main class="max-w-xl w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <!-- Header -->
+        <header class="text-center space-y-4">
+            <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white text-3xl font-bold mb-4 shadow-xl shadow-indigo-200">
+                SW
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight text-slate-900">Spenser Wu</h1>
+            <p class="text-lg text-slate-600">Building things at the intersection of design and code.</p>
+        </header>
+
+        <!-- Links Container -->
+        <div class="grid gap-4">
+            <!-- X / Twitter -->
+            <a href="https://x.com/kytherax" target="_blank" rel="noopener noreferrer" 
+               class="glass group flex items-center p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:shadow-xl hover:shadow-indigo-100">
+                <div class="p-3 rounded-xl bg-slate-900 text-white group-hover:bg-indigo-600 transition-colors">
+                    <i data-lucide="twitter" class="w-6 h-6"></i>
+                </div>
+                <div class="ml-4">
+                    <h2 class="font-semibold text-slate-900">X</h2>
+                    <p class="text-sm text-slate-500">@kytherax</p>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 ml-auto text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/icar1an" target="_blank" rel="noopener noreferrer"
+               class="glass group flex items-center p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:shadow-xl hover:shadow-indigo-100">
+                <div class="p-3 rounded-xl bg-slate-900 text-white group-hover:bg-indigo-600 transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </div>
+                <div class="ml-4">
+                    <h2 class="font-semibold text-slate-900">GitHub</h2>
+                    <p class="text-sm text-slate-500">@icar1an</p>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 ml-auto text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:spenser.f.wu@gmail.com"
+               class="glass group flex items-center p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:shadow-xl hover:shadow-indigo-100">
+                <div class="p-3 rounded-xl bg-slate-900 text-white group-hover:bg-indigo-600 transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div class="ml-4">
+                    <h2 class="font-semibold text-slate-900">Email</h2>
+                    <p class="text-sm text-slate-500">spenser.f.wu@gmail.com</p>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 ml-auto text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
+            </a>
+        </div>
+
+        <footer class="text-center pt-8">
+            <p class="text-sm text-slate-400 font-medium tracking-wide">© 2025 SPENSER WU</p>
+        </footer>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
