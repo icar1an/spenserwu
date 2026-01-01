@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,7 +78,8 @@
             max-width: 300px;
         }
 
-        .doc-title:hover, .doc-title:focus {
+        .doc-title:hover,
+        .doc-title:focus {
             background: #f1f3f4;
         }
 
@@ -177,7 +179,7 @@
 
         .share-btn:hover {
             background: #1765cc;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .share-btn svg {
@@ -406,7 +408,7 @@
         }
 
         .sidebar-tab-menu:hover {
-            background: rgba(0,0,0,0.08);
+            background: rgba(0, 0, 0, 0.08);
         }
 
         .sidebar-hint {
@@ -490,7 +492,7 @@
             width: 816px;
             min-height: 1056px;
             background: #fff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
             padding: 96px 96px 72px;
             position: relative;
             outline: none;
@@ -545,75 +547,95 @@
             .right-sidebar {
                 display: none;
             }
+
             .page {
                 width: 100%;
                 min-height: auto;
                 padding: 24px 20px 48px;
                 box-shadow: none;
             }
+
             .ruler {
                 display: none;
             }
+
             .menu-bar {
                 display: none;
             }
+
             .header {
                 padding: 8px 12px;
             }
+
             .header-icon-btn {
                 display: none;
             }
+
             .share-btn {
                 padding: 8px 16px;
                 font-size: 13px;
             }
+
             .share-btn svg {
                 display: none;
             }
+
             .doc-title {
                 font-size: 16px;
                 max-width: 150px;
             }
+
             .doc-icon {
                 width: 32px;
                 height: 32px;
             }
+
             .doc-icon svg {
                 width: 28px;
                 height: 28px;
             }
+
             .icon-btn {
                 display: none;
             }
+
             .toolbar-container {
                 padding: 4px;
             }
+
             .toolbar {
                 padding: 4px 8px;
                 border-radius: 0;
                 gap: 0;
             }
+
             .tool-select {
                 display: none;
             }
+
             .tool-btn {
                 min-width: 36px;
                 height: 36px;
             }
+
             .tool-btn svg {
                 width: 20px;
                 height: 20px;
             }
+
             .font-size-input {
                 display: none;
             }
+
             .main-container {
                 height: auto;
                 min-height: calc(100vh - 100px);
             }
+
             .doc-area {
                 min-height: auto;
             }
+
             .doc-scroll {
                 padding: 8px;
             }
@@ -624,39 +646,48 @@
                 padding: 6px 8px;
                 gap: 6px;
             }
+
             .header-middle {
                 min-width: 0;
             }
+
             .doc-title {
                 font-size: 15px;
                 max-width: 120px;
                 padding: 2px;
             }
+
             .share-btn {
                 padding: 6px 12px;
                 font-size: 12px;
                 border-radius: 18px;
             }
+
             .avatar {
                 width: 30px;
                 height: 30px;
             }
+
             .avatar-inner {
                 width: 26px;
                 height: 26px;
                 font-size: 12px;
             }
+
             .toolbar {
                 padding: 2px 4px;
                 justify-content: space-around;
             }
+
             .tool-divider {
                 display: none;
             }
+
             .tool-btn {
                 min-width: 40px;
                 height: 40px;
             }
+
             /* Hide less essential toolbar buttons on small screens */
             .tool-btn[title*="Spelling"],
             .tool-btn[title*="Paint"],
@@ -677,14 +708,17 @@
             .tool-btn[title*="Highlight"] {
                 display: none;
             }
+
             .page {
                 padding: 20px 16px 40px;
                 font-size: 14px;
                 line-height: 1.5;
             }
+
             .page p {
                 margin-bottom: 1em;
             }
+
             .doc-scroll {
                 padding: 4px;
             }
@@ -696,9 +730,11 @@
                 min-width: 44px;
                 height: 44px;
             }
+
             .menu-item {
                 padding: 8px 12px;
             }
+
             .dropdown-item {
                 padding: 12px 16px;
             }
@@ -716,8 +752,16 @@
         }
 
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
         }
 
         /* Content */
@@ -752,13 +796,13 @@
             padding: 12px 16px;
             font-size: 13px;
             line-height: 1.4;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             z-index: 10;
         }
 
         .comment:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .comment-header {
@@ -807,6 +851,7 @@
             .comment {
                 display: none;
             }
+
             .highlight {
                 background: transparent;
             }
@@ -819,7 +864,7 @@
             left: 0;
             background: #fff;
             border-radius: 4px;
-            box-shadow: 0 2px 6px 2px rgba(60,64,67,0.15);
+            box-shadow: 0 2px 6px 2px rgba(60, 64, 67, 0.15);
             min-width: 200px;
             padding: 6px 0;
             display: none;
@@ -872,7 +917,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             display: none;
             align-items: center;
             justify-content: center;
@@ -883,12 +928,129 @@
             display: flex;
         }
 
+        /* Daymare Doc Modal */
+        .daymare-doc-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #f8f9fa;
+            display: none;
+            flex-direction: column;
+            z-index: 4000;
+        }
+
+        .daymare-doc-modal.show {
+            display: flex;
+        }
+
+        .daymare-doc-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #fff;
+            gap: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .daymare-doc-header .doc-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .daymare-doc-header .doc-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .daymare-doc-title {
+            font-family: 'Google Sans', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: #202124;
+            flex: 1;
+        }
+
+        .daymare-close-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #5f6368;
+            background: transparent;
+            border: none;
+            transition: background 0.2s;
+        }
+
+        .daymare-close-btn:hover {
+            background: #f1f3f4;
+        }
+
+        .daymare-close-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .daymare-doc-content {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            padding: 24px 16px;
+        }
+
+        .daymare-page {
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            width: 100%;
+            max-width: 816px;
+            min-height: 1056px;
+            padding: 96px;
+            font-family: Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #000;
+        }
+
+        .daymare-page h1 {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .daymare-page p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        @media (max-width: 900px) {
+            .daymare-page {
+                padding: 48px 32px;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .daymare-page {
+                padding: 24px 16px;
+            }
+        }
+
         .modal {
             background: #fff;
             border-radius: 8px;
             width: 90%;
             max-width: 512px;
-            box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14);
+            box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14);
             max-height: 90vh;
             overflow-y: auto;
         }
@@ -898,21 +1060,26 @@
                 width: 95%;
                 border-radius: 12px;
             }
+
             .modal-header {
                 padding: 20px 16px 12px;
                 font-size: 18px;
             }
+
             .modal-body {
                 padding: 0 16px 16px;
             }
+
             .modal-footer {
                 padding: 12px 16px;
                 flex-direction: column;
                 gap: 12px;
             }
+
             .modal-link {
                 order: 2;
             }
+
             .modal-btn {
                 width: 100%;
                 order: 1;
@@ -1079,7 +1246,7 @@
             position: fixed;
             background: #fff;
             border-radius: 4px;
-            box-shadow: 0 2px 6px 2px rgba(60,64,67,0.15);
+            box-shadow: 0 2px 6px 2px rgba(60, 64, 67, 0.15);
             min-width: 180px;
             padding: 6px 0;
             display: none;
@@ -1130,18 +1297,19 @@
         }
 
         .konami-mode .highlight {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <div class="header">
         <div class="doc-icon" id="docIcon" title="Docs home">
             <svg viewBox="0 0 48 48" fill="none">
-                <path d="M7 2h24l10 10v34H7z" fill="#4285f4"/>
-                <path d="M31 2l10 10H31z" fill="#a1c2fa"/>
-                <path d="M14 18h20v2H14zm0 6h20v2H14zm0 6h14v2H14z" fill="#fff"/>
+                <path d="M7 2h24l10 10v34H7z" fill="#4285f4" />
+                <path d="M31 2l10 10H31z" fill="#a1c2fa" />
+                <path d="M14 18h20v2H14zm0 6h20v2H14zm0 6h14v2H14z" fill="#fff" />
             </svg>
         </div>
         <div class="header-middle">
@@ -1149,25 +1317,30 @@
                 <input type="text" class="doc-title" id="docTitle" value="spenser wu">
                 <div class="icon-btn" id="starBtn" title="Star">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                 </div>
                 <div class="icon-btn" title="Move">
                     <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
+                        <path
+                            d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V6h5.17l2 2H20v10z" />
                     </svg>
                 </div>
             </div>
             <div class="menu-bar">
                 <div class="menu-item" data-menu="file">File
                     <div class="dropdown" id="fileMenu">
-                        <div class="dropdown-item" data-action="new">New <span class="dropdown-shortcut">Ctrl+N</span></div>
-                        <div class="dropdown-item" data-action="open">Open <span class="dropdown-shortcut">Ctrl+O</span></div>
+                        <div class="dropdown-item" data-action="new">New <span class="dropdown-shortcut">Ctrl+N</span>
+                        </div>
+                        <div class="dropdown-item" data-action="open">Open <span class="dropdown-shortcut">Ctrl+O</span>
+                        </div>
                         <div class="dropdown-divider"></div>
                         <div class="dropdown-item" data-action="share">Share</div>
                         <div class="dropdown-item" data-action="download">Download</div>
                         <div class="dropdown-divider"></div>
-                        <div class="dropdown-item" data-action="print">Print <span class="dropdown-shortcut">Ctrl+P</span></div>
+                        <div class="dropdown-item" data-action="print">Print <span
+                                class="dropdown-shortcut">Ctrl+P</span></div>
                     </div>
                 </div>
                 <div class="menu-item" data-menu="edit">Edit
@@ -1175,11 +1348,15 @@
                         <div class="dropdown-item disabled">Undo <span class="dropdown-shortcut">Ctrl+Z</span></div>
                         <div class="dropdown-item disabled">Redo <span class="dropdown-shortcut">Ctrl+Y</span></div>
                         <div class="dropdown-divider"></div>
-                        <div class="dropdown-item" data-action="cut">Cut <span class="dropdown-shortcut">Ctrl+X</span></div>
-                        <div class="dropdown-item" data-action="copy">Copy <span class="dropdown-shortcut">Ctrl+C</span></div>
-                        <div class="dropdown-item" data-action="paste">Paste <span class="dropdown-shortcut">Ctrl+V</span></div>
+                        <div class="dropdown-item" data-action="cut">Cut <span class="dropdown-shortcut">Ctrl+X</span>
+                        </div>
+                        <div class="dropdown-item" data-action="copy">Copy <span class="dropdown-shortcut">Ctrl+C</span>
+                        </div>
+                        <div class="dropdown-item" data-action="paste">Paste <span
+                                class="dropdown-shortcut">Ctrl+V</span></div>
                         <div class="dropdown-divider"></div>
-                        <div class="dropdown-item" data-action="selectall">Select all <span class="dropdown-shortcut">Ctrl+A</span></div>
+                        <div class="dropdown-item" data-action="selectall">Select all <span
+                                class="dropdown-shortcut">Ctrl+A</span></div>
                     </div>
                 </div>
                 <div class="menu-item" data-menu="view">View
@@ -1191,23 +1368,29 @@
                 <div class="menu-item" data-menu="insert">Insert
                     <div class="dropdown" id="insertMenu">
                         <div class="dropdown-item" data-action="image">Image</div>
-                        <div class="dropdown-item" data-action="link">Link <span class="dropdown-shortcut">Ctrl+K</span></div>
+                        <div class="dropdown-item" data-action="link">Link <span class="dropdown-shortcut">Ctrl+K</span>
+                        </div>
                         <div class="dropdown-divider"></div>
                         <div class="dropdown-item" data-action="horizontal">Horizontal line</div>
                     </div>
                 </div>
                 <div class="menu-item" data-menu="format">Format
                     <div class="dropdown" id="formatMenu">
-                        <div class="dropdown-item" data-action="bold">Bold <span class="dropdown-shortcut">Ctrl+B</span></div>
-                        <div class="dropdown-item" data-action="italic">Italic <span class="dropdown-shortcut">Ctrl+I</span></div>
-                        <div class="dropdown-item" data-action="underline">Underline <span class="dropdown-shortcut">Ctrl+U</span></div>
+                        <div class="dropdown-item" data-action="bold">Bold <span class="dropdown-shortcut">Ctrl+B</span>
+                        </div>
+                        <div class="dropdown-item" data-action="italic">Italic <span
+                                class="dropdown-shortcut">Ctrl+I</span></div>
+                        <div class="dropdown-item" data-action="underline">Underline <span
+                                class="dropdown-shortcut">Ctrl+U</span></div>
                         <div class="dropdown-divider"></div>
-                        <div class="dropdown-item" data-action="clear">Clear formatting <span class="dropdown-shortcut">Ctrl+\</span></div>
+                        <div class="dropdown-item" data-action="clear">Clear formatting <span
+                                class="dropdown-shortcut">Ctrl+\</span></div>
                     </div>
                 </div>
                 <div class="menu-item" data-menu="tools">Tools
                     <div class="dropdown" id="toolsMenu">
-                        <div class="dropdown-item" data-action="wordcount">Word count <span class="dropdown-shortcut">Ctrl+Shift+C</span></div>
+                        <div class="dropdown-item" data-action="wordcount">Word count <span
+                                class="dropdown-shortcut">Ctrl+Shift+C</span></div>
                         <div class="dropdown-item" data-action="voice">Voice typing</div>
                         <div class="dropdown-divider"></div>
                         <div class="dropdown-item" data-action="preferences">Preferences</div>
@@ -1234,13 +1417,22 @@
         </div>
         <div class="header-right">
             <div class="header-icon-btn" title="Open comment history">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z" />
+                </svg>
             </div>
             <div class="header-icon-btn" title="Join a call or present this tab">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.5 12.5l2.5 3 3.5-4.5 4.5 6H4.5l3.5-4.5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.5 12.5l2.5 3 3.5-4.5 4.5 6H4.5l3.5-4.5z" />
+                </svg>
             </div>
             <button class="share-btn" id="shareBtn">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="white">
+                    <path
+                        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+                </svg>
                 Share
             </button>
             <div class="avatar" id="userAvatar" title="Spenser Wu">
@@ -1253,98 +1445,178 @@
     <div class="toolbar-container">
         <div class="toolbar">
             <div class="tool-btn" title="Search the menus (Alt+/)">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn disabled" title="Undo (Ctrl+Z)" id="undoBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 8c-2.65 0-5.05 1.04-6.83 2.75L3 8v9h9l-2.83-2.83c1.48-1.48 3.5-2.4 5.83-2.4 3.87 0 7.14 2.65 8.07 6.23l2.12-.71C24.08 13.23 18.86 8 12.5 8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12.5 8c-2.65 0-5.05 1.04-6.83 2.75L3 8v9h9l-2.83-2.83c1.48-1.48 3.5-2.4 5.83-2.4 3.87 0 7.14 2.65 8.07 6.23l2.12-.71C24.08 13.23 18.86 8 12.5 8z" />
+                </svg>
             </div>
             <div class="tool-btn disabled" title="Redo (Ctrl+Y)" id="redoBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.4 10.6L21 8v9h-9l2.83-2.83c-1.48-1.48-3.5-2.4-5.83-2.4-3.87 0-7.14 2.65-8.07 6.23l-2.12-.71C-.08 13.23 5.14 8 11.5 8c2.65 0 5.05 1.04 6.83 2.75z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M18.4 10.6L21 8v9h-9l2.83-2.83c-1.48-1.48-3.5-2.4-5.83-2.4-3.87 0-7.14 2.65-8.07 6.23l-2.12-.71C-.08 13.23 5.14 8 11.5 8c2.65 0 5.05 1.04 6.83 2.75z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Print (Ctrl+P)" id="printBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Spelling and grammar check (Ctrl+Alt+X)">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.45 16h2.09L9.43 3H7.57L2.46 16h2.09l1.12-3h5.64l1.14 3zm-6.02-5L8.5 5.48 10.57 11H6.43zm15.16.59l-8.09 8.09L9.83 16l-1.41 1.41 5.09 5.09L23 13l-1.41-1.41z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12.45 16h2.09L9.43 3H7.57L2.46 16h2.09l1.12-3h5.64l1.14 3zm-6.02-5L8.5 5.48 10.57 11H6.43zm15.16.59l-8.09 8.09L9.83 16l-1.41 1.41 5.09 5.09L23 13l-1.41-1.41z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Paint format">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-select" id="zoomSelect">
                 100%
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-select" style="min-width: 100px;" id="styleSelect">
                 Normal text
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-select" style="min-width: 80px;" id="fontSelect">
                 Arial
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn" title="Decrease font size (Ctrl+Shift+,)">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13H5v-2h14v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 13H5v-2h14v2z" />
+                </svg>
             </div>
             <input type="text" class="font-size-input" value="11" title="Font size">
             <div class="tool-btn" title="Increase font size (Ctrl+Shift+.)">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn" title="Bold (Ctrl+B)" id="boldBtn" style="font-weight: bold; font-size: 15px;">B</div>
-            <div class="tool-btn" title="Italic (Ctrl+I)" id="italicBtn" style="font-style: italic; font-size: 15px; font-family: serif;">I</div>
-            <div class="tool-btn" title="Underline (Ctrl+U)" id="underlineBtn" style="text-decoration: underline; font-size: 15px;">U</div>
+            <div class="tool-btn" title="Italic (Ctrl+I)" id="italicBtn"
+                style="font-style: italic; font-size: 15px; font-family: serif;">I</div>
+            <div class="tool-btn" title="Underline (Ctrl+U)" id="underlineBtn"
+                style="text-decoration: underline; font-size: 15px;">U</div>
             <div class="tool-btn" title="Text color">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"/><path d="M5 19h14v3H5z" fill="#000"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z" />
+                    <path d="M5 19h14v3H5z" fill="#000" />
+                </svg>
             </div>
             <div class="tool-btn" title="Highlight color" id="highlightBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 14l3 3v5h6v-5l3-3V9H6v5zm5-12h2v3h-2V2zM3.5 5.88l1.41-1.41 2.12 2.12L5.62 8 3.5 5.88zm13.46.71l2.12-2.12 1.41 1.41L18.38 8l-1.42-1.41z"/><path d="M5 19h14v3H5z" fill="#fce8b2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M6 14l3 3v5h6v-5l3-3V9H6v5zm5-12h2v3h-2V2zM3.5 5.88l1.41-1.41 2.12 2.12L5.62 8 3.5 5.88zm13.46.71l2.12-2.12 1.41 1.41L18.38 8l-1.42-1.41z" />
+                    <path d="M5 19h14v3H5z" fill="#fce8b2" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn" title="Insert link (Ctrl+K)" id="linkBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Add comment (Ctrl+Alt+M)" id="commentBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M12 15h2v2h-2zm0-8h2v6h-2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z" />
+                    <path d="M12 15h2v2h-2zm0-8h2v6h-2z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Insert image" id="imageBtn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn" title="Align & indent">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Line & paragraph spacing">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 7h2.5L5 3.5 1.5 7H4v10H1.5L5 20.5 8.5 17H6V7zm4-2v2h12V5H10zm0 14h12v-2H10v2zm0-6h12v-2H10v2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M6 7h2.5L5 3.5 1.5 7H4v10H1.5L5 20.5 8.5 17H6V7zm4-2v2h12V5H10zm0 14h12v-2H10v2zm0-6h12v-2H10v2z" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn" title="Checklist menu">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-9v2h9V7zm0 8h-9v2h9v-2zM5.54 11L2 7.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 11zm0 8L2 15.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 19z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M22 7h-9v2h9V7zm0 8h-9v2h9v-2zM5.54 11L2 7.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 11zm0 8L2 15.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 19z" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Bulleted list menu">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Numbered list menu">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 17h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1 3h1.8L2 13.1v.9h3v-1H3.2L5 10.9V10H2v1zm5-6v2h14V5H7zm0 14h14v-2H7v2zm0-6h14v-2H7v2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;"><path d="M7 10l5 5 5-5z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M2 17h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1 3h1.8L2 13.1v.9h3v-1H3.2L5 10.9V10H2v1zm5-6v2h14V5H7zm0 14h14v-2H7v2zm0-6h14v-2H7v2z" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;margin-left:-2px;">
+                    <path d="M7 10l5 5 5-5z" />
+                </svg>
             </div>
             <div class="tool-divider"></div>
             <div class="tool-btn" title="Decrease indent (Ctrl+[)">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Increase indent (Ctrl+])">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z" />
+                </svg>
             </div>
             <div class="tool-btn" title="Clear formatting (Ctrl+\)">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.27 5L2 6.27l6.97 6.97L6.5 19h3l1.57-3.66L16.73 21 18 19.73 3.27 5zM6 5v.18L8.82 8h2.4l-.72 1.68 2.1 2.1L14.21 8H20V5H6z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M3.27 5L2 6.27l6.97 6.97L6.5 19h3l1.57-3.66L16.73 21 18 19.73 3.27 5zM6 5v.18L8.82 8h2.4l-.72 1.68 2.1 2.1L14.21 8H20V5H6z" />
+                </svg>
             </div>
         </div>
     </div>
@@ -1354,19 +1626,28 @@
         <!-- Left sidebar -->
         <div class="left-sidebar">
             <div class="sidebar-back" title="Hide outline">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
             </div>
             <div class="sidebar-header">
                 Document tabs
                 <div class="sidebar-add" title="Add tab">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                    </svg>
                 </div>
             </div>
             <div class="sidebar-tab">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" />
+                </svg>
                 <span class="sidebar-tab-name">Tab 1</span>
                 <div class="sidebar-tab-menu" title="Tab options">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path
+                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                    </svg>
                 </div>
             </div>
             <div class="sidebar-hint">Headings you add to the document will appear here.</div>
@@ -1408,13 +1689,17 @@
 
                     <p><b>projects</b></p>
                     <p>
-                        <a href="https://heartpv.spenserwu.com" contenteditable="false" target="_blank">heartpv</a> — heart thing
+                        <a href="https://chromewebstore.google.com/detail/veil/lneibmllflnollbfbmdomcdibmnboamg?authuser=0&hl=en"
+                            contenteditable="false" target="_blank">veil</a> — replace youtube thumbnails with minimal
+                        typographic cards
                     </p>
                     <p>
-                        <a href="https://jensenindex.onrender.com/" contenteditable="false" target="_blank">jensenindex</a> — bloomberg terminal for leather jackets on grailed + nvda
+                        <a href="https://jensenindex.onrender.com/" contenteditable="false"
+                            target="_blank">jensenindex</a> — bloomberg terminal for leather jackets on grailed
                     </p>
                     <p>
-                        <a href="https://chromewebstore.google.com/detail/veil/placeholder" contenteditable="false" target="_blank">veil</a> — replace youtube thumbnails with minimal typographic cards
+                        <a href="https://heartpv.spenserwu.com" contenteditable="false" target="_blank">heartpv</a> —
+                        heartbeat amortization
                     </p>
 
                     <p></p>
@@ -1429,7 +1714,11 @@
                     <div id="daymare" style="display: none;">
                         <p><b>daymare</b></p>
 
-                        <p>I open my eyes and find myself in the heart of a rolling grassland. The landscape is dotted with tufts of colorful wildflowers, under a blue sky filled with sheets of soft clouds. From a distance, a herd of wild horses gallops in my direction. Suddenly, an unsettling tremor ripples through the ground. Before I can react, the earth splits open beneath my feet. I'm swallowed by the resulting abyss, my bones shatter, and my vision goes dark.</p>
+                        <p>I open my eyes and find myself in the heart of a rolling grassland. The landscape is dotted
+                            with tufts of colorful wildflowers, under a blue sky filled with sheets of soft clouds. From
+                            a distance, a herd of wild horses gallops in my direction. Suddenly, an unsettling tremor
+                            ripples through the ground. Before I can react, the earth splits open beneath my feet. I'm
+                            swallowed by the resulting abyss, my bones shatter, and my vision goes dark.</p>
 
                         <p>"You are not executing the technique correctly."</p>
 
@@ -1437,36 +1726,63 @@
 
                         <p>"Your body is tense. Relax, try again." </p>
 
-                        <p>The voice of my erhu teacher, Mr. Lin, coaxes me back to reality; I'm failing to play the last line of my piece, “Galloping in the Great Grasslands.” Resting in my hands is my erhu, a traditional Chinese string instrument. It consists of a wooden frame, a horsehair bow, and a hexagonal soundbox covered by a layer of python skin on one side. My instrument looks deceptively simple, almost primitive. Yet even a decade later, its mellow, evocative, and almost human tone still connects me to my Chinese heritage. In preparation for an upcoming competition, Mr. Lin began teaching me how to mimic the sound of a horse neighing. It is one of the instrument’s signature techniques, and I had been struggling with it for months.</p>
- 
-                        <p>I try again. I fail again -- my erhu screeches in pain. The sharp sound slices through the air, and I grimace. </p>
+                        <p>The voice of my erhu teacher, Mr. Lin, coaxes me back to reality; I'm failing to play the
+                            last line of my piece, “Galloping in the Great Grasslands.” Resting in my hands is my erhu,
+                            a traditional Chinese string instrument. It consists of a wooden frame, a horsehair bow, and
+                            a hexagonal soundbox covered by a layer of python skin on one side. My instrument looks
+                            deceptively simple, almost primitive. Yet even a decade later, its mellow, evocative, and
+                            almost human tone still connects me to my Chinese heritage. In preparation for an upcoming
+                            competition, Mr. Lin began teaching me how to mimic the sound of a horse neighing. It is one
+                            of the instrument’s signature techniques, and I had been struggling with it for months.</p>
 
-                        <p>Mr. Lin tries to encourage me. "Your bow must ricochet against the outer string to create the neighing. Keep practicing, you cannot force this."</p>
+                        <p>I try again. I fail again -- my erhu screeches in pain. The sharp sound slices through the
+                            air, and I grimace. </p>
 
-                        <p>My face pressed against the passenger window during my drive home, I stared into the distance, lost in thought. What was I missing? Practicing intensely only made the technique more confusing; applying extra rosin left me cleaning sticky layers of white powder from my erhu. My instrument spluttered regardless of my efforts, and my daymares continued. The date of the competition crawled ever closer, and I consulted Mr. Lin once again. </p>
+                        <p>Mr. Lin tries to encourage me. "Your bow must ricochet against the outer string to create the
+                            neighing. Keep practicing, you cannot force this."</p>
 
-                        <p>"Spenser, this technique, ma jiao sheng, is what brings this piece together. You must do it well."</p>
+                        <p>My face pressed against the passenger window during my drive home, I stared into the
+                            distance, lost in thought. What was I missing? Practicing intensely only made the technique
+                            more confusing; applying extra rosin left me cleaning sticky layers of white powder from my
+                            erhu. My instrument spluttered regardless of my efforts, and my daymares continued. The date
+                            of the competition crawled ever closer, and I consulted Mr. Lin once again. </p>
 
-                        <p>“I've been practicing this piece for at least two years now, what difference could one ma jiao sheng possibly make?”</p>
+                        <p>"Spenser, this technique, ma jiao sheng, is what brings this piece together. You must do it
+                            well."</p>
+
+                        <p>“I've been practicing this piece for at least two years now, what difference could one ma
+                            jiao sheng possibly make?”</p>
 
                         <p>After a long pause, Mr. Lin replied. "Play the last part again."</p>
 
                         <p>I played the section, deliberately omitting the horse neighing.</p>
 
-                        <p>"When you sacrifice small details, you lose the essence of the music. This is a song about a grassland. If you leave out ma jiao sheng, the horses will fade, the grass will wilt, and the sky will crumble."</p>
+                        <p>"When you sacrifice small details, you lose the essence of the music. This is a song about a
+                            grassland. If you leave out ma jiao sheng, the horses will fade, the grass will wilt, and
+                            the sky will crumble."</p>
 
                         <p>I grip my erhu tightly, and begin playing again. </p>
 
-                        <p>Once again in the grassland, the same herd of horses begins galloping toward me. I run my hand along the edge of the previous chasm and feel a new tremor growing in power. As the rumbling intensifies, I take a deep breath and close my eyes. I glide my bow down my erhu, and it softly ricochets off the outside string. It makes a gentle neighing sound, a stark contrast to my previous attempts. As I shout with joy, I see Mr. Lin smiling proudly. I turn my head, just in time to watch the last few horses gallop towards the horizon. </p>
+                        <p>Once again in the grassland, the same herd of horses begins galloping toward me. I run my
+                            hand along the edge of the previous chasm and feel a new tremor growing in power. As the
+                            rumbling intensifies, I take a deep breath and close my eyes. I glide my bow down my erhu,
+                            and it softly ricochets off the outside string. It makes a gentle neighing sound, a stark
+                            contrast to my previous attempts. As I shout with joy, I see Mr. Lin smiling proudly. I turn
+                            my head, just in time to watch the last few horses gallop towards the horizon. </p>
 
-                        <p>I never expected to find beauty within the details of my piece. Working together with Mr. Lin in the pursuit of mastery made me draw upon parts of myself that I didn't know existed. To understand the story behind a piece I had been playing for years, to feel both triumph and peace as time melts away, that experience is unparalleled. Now when I close my eyes, I can finally hear horses neighing in the great grasslands. And I know that I can follow them towards the rising sun. </p>
+                        <p>I never expected to find beauty within the details of my piece. Working together with Mr. Lin
+                            in the pursuit of mastery made me draw upon parts of myself that I didn't know existed. To
+                            understand the story behind a piece I had been playing for years, to feel both triumph and
+                            peace as time melts away, that experience is unparalleled. Now when I close my eyes, I can
+                            finally hear horses neighing in the great grasslands. And I know that I can follow them
+                            towards the rising sun. </p>
                     </div>
 
                     <p></p>
 
                     <p>
-                        <a href="mailto:spenser.f.wu@gmail.com" contenteditable="false">email</a> · 
-                        <a href="https://x.com/kytherax" contenteditable="false" target="_blank">x</a> · 
+                        <a href="mailto:spenser.f.wu@gmail.com" contenteditable="false">email</a> ·
+                        <a href="https://x.com/kytherax" contenteditable="false" target="_blank">x</a> ·
                         <a href="https://github.com/icar1an" contenteditable="false" target="_blank">github</a>
                     </p>
 
@@ -1481,23 +1797,39 @@
         <!-- Right sidebar -->
         <div class="right-sidebar">
             <div class="right-sidebar-btn" title="Calendar">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z" />
+                </svg>
             </div>
             <div class="right-sidebar-btn" title="Keep">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z" />
+                </svg>
             </div>
             <div class="right-sidebar-btn" title="Tasks">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.18L10.59 16.6l-4.24-4.24 1.41-1.41 2.83 2.83 10-10L22 5.18zM19.79 10.22C19.92 10.79 20 11.39 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8c1.58 0 3.04.46 4.28 1.25l1.44-1.44C16.1 2.67 14.13 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.19-.22-2.33-.6-3.39l-1.61 1.61z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M22 5.18L10.59 16.6l-4.24-4.24 1.41-1.41 2.83 2.83 10-10L22 5.18zM19.79 10.22C19.92 10.79 20 11.39 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8c1.58 0 3.04.46 4.28 1.25l1.44-1.44C16.1 2.67 14.13 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.19-.22-2.33-.6-3.39l-1.61 1.61z" />
+                </svg>
             </div>
             <div class="right-sidebar-btn" title="Contacts">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 0H4v2h16V0zM4 24h16v-2H4v2zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25S9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-1.5c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 0H4v2h16V0zM4 24h16v-2H4v2zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25S9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-1.5c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z" />
+                </svg>
             </div>
             <div class="right-sidebar-btn" title="Maps">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+                </svg>
             </div>
             <div class="right-sidebar-spacer"></div>
             <div class="right-sidebar-btn" title="Get add-ons">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
             </div>
         </div>
     </div>
@@ -1528,7 +1860,10 @@
             </div>
             <div class="modal-footer">
                 <div class="modal-link" id="copyLinkBtn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#1a73e8"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#1a73e8">
+                        <path
+                            d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
+                    </svg>
                     Copy link
                 </div>
                 <button class="modal-btn" id="doneBtn">Done</button>
@@ -1559,7 +1894,8 @@
                 </div>
             </div>
             <div class="modal-footer" style="justify-content: flex-end;">
-                <button class="modal-btn" onclick="document.getElementById('wordCountModal').classList.remove('show')">OK</button>
+                <button class="modal-btn"
+                    onclick="document.getElementById('wordCountModal').classList.remove('show')">OK</button>
             </div>
         </div>
     </div>
@@ -1573,6 +1909,93 @@
         <div class="dropdown-item" data-action="selectall">Select all</div>
         <div class="dropdown-divider"></div>
         <div class="dropdown-item" data-action="inspect">Inspect (wait, this isn't a real doc)</div>
+    </div>
+
+    <!-- Daymare Doc Modal -->
+    <div class="daymare-doc-modal" id="daymareDocModal">
+        <div class="daymare-doc-header">
+            <div class="doc-icon" title="Back to main doc">
+                <svg viewBox="0 0 48 48" fill="none">
+                    <path d="M7 2h24l10 10v34H7z" fill="#4285f4" />
+                    <path d="M31 2l10 10H31z" fill="#a1c2fa" />
+                    <path d="M14 18h20v2H14zm0 6h20v2H14zm0 6h14v2H14z" fill="#fff" />
+                </svg>
+            </div>
+            <div class="daymare-doc-title">daymare</div>
+            <button class="daymare-close-btn" id="daymareCloseBtn" title="Close">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+            </button>
+        </div>
+        <div class="daymare-doc-content">
+            <div class="daymare-page">
+                <h1>daymare</h1>
+
+                <p>I open my eyes and find myself in the heart of a rolling grassland. The landscape is dotted with
+                    tufts of colorful wildflowers, under a blue sky filled with sheets of soft clouds. From a distance,
+                    a herd of wild horses gallops in my direction. Suddenly, an unsettling tremor ripples through the
+                    ground. Before I can react, the earth splits open beneath my feet. I'm swallowed by the resulting
+                    abyss, my bones shatter, and my vision goes dark.</p>
+
+                <p>"You are not executing the technique correctly."</p>
+
+                <p>Jarred from my daymare, I stare blankly at my sheet music.</p>
+
+                <p>"Your body is tense. Relax, try again."</p>
+
+                <p>The voice of my erhu teacher, Mr. Lin, coaxes me back to reality; I'm failing to play the last line
+                    of my piece, "Galloping in the Great Grasslands." Resting in my hands is my erhu, a traditional
+                    Chinese string instrument. It consists of a wooden frame, a horsehair bow, and a hexagonal soundbox
+                    covered by a layer of python skin on one side. My instrument looks deceptively simple, almost
+                    primitive. Yet even a decade later, its mellow, evocative, and almost human tone still connects me
+                    to my Chinese heritage. In preparation for an upcoming competition, Mr. Lin began teaching me how to
+                    mimic the sound of a horse neighing. It is one of the instrument's signature techniques, and I had
+                    been struggling with it for months.</p>
+
+                <p>I try again. I fail again -- my erhu screeches in pain. The sharp sound slices through the air, and I
+                    grimace.</p>
+
+                <p>Mr. Lin tries to encourage me. "Your bow must ricochet against the outer string to create the
+                    neighing. Keep practicing, you cannot force this."</p>
+
+                <p>My face pressed against the passenger window during my drive home, I stared into the distance, lost
+                    in thought. What was I missing? Practicing intensely only made the technique more confusing;
+                    applying extra rosin left me cleaning sticky layers of white powder from my erhu. My instrument
+                    spluttered regardless of my efforts, and my daymares continued. The date of the competition crawled
+                    ever closer, and I consulted Mr. Lin once again.</p>
+
+                <p>"Spenser, this technique, ma jiao sheng, is what brings this piece together. You must do it well."
+                </p>
+
+                <p>"I've been practicing this piece for at least two years now, what difference could one ma jiao sheng
+                    possibly make?"</p>
+
+                <p>After a long pause, Mr. Lin replied. "Play the last part again."</p>
+
+                <p>I played the section, deliberately omitting the horse neighing.</p>
+
+                <p>"When you sacrifice small details, you lose the essence of the music. This is a song about a
+                    grassland. If you leave out ma jiao sheng, the horses will fade, the grass will wilt, and the sky
+                    will crumble."</p>
+
+                <p>I grip my erhu tightly, and begin playing again.</p>
+
+                <p>Once again in the grassland, the same herd of horses begins galloping toward me. I run my hand along
+                    the edge of the previous chasm and feel a new tremor growing in power. As the rumbling intensifies,
+                    I take a deep breath and close my eyes. I glide my bow down my erhu, and it softly ricochets off the
+                    outside string. It makes a gentle neighing sound, a stark contrast to my previous attempts. As I
+                    shout with joy, I see Mr. Lin smiling proudly. I turn my head, just in time to watch the last few
+                    horses gallop towards the horizon.</p>
+
+                <p>I never expected to find beauty within the details of my piece. Working together with Mr. Lin in the
+                    pursuit of mastery made me draw upon parts of myself that I didn't know existed. To understand the
+                    story behind a piece I had been playing for years, to feel both triumph and peace as time melts
+                    away, that experience is unparalleled. Now when I close my eyes, I can finally hear horses neighing
+                    in the great grasslands. And I know that I can follow them towards the rising sun.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Toast -->
@@ -1598,7 +2021,7 @@
         page.addEventListener('blur', () => mainCursor.style.display = 'inline-block');
 
         // Star button
-        document.getElementById('starBtn').addEventListener('click', function() {
+        document.getElementById('starBtn').addEventListener('click', function () {
             this.classList.toggle('starred');
             showToast(this.classList.contains('starred') ? 'Added to starred' : 'Removed from starred');
         });
@@ -1654,7 +2077,7 @@
         });
 
         function handleAction(action) {
-            switch(action) {
+            switch (action) {
                 case 'new':
                     window.open('https://docs.new', '_blank');
                     break;
@@ -1742,15 +2165,15 @@
             const words = text.trim().split(/\s+/).filter(w => w.length > 0).length;
             const chars = text.length;
             const charsNoSpace = text.replace(/\s/g, '').length;
-            
+
             document.getElementById('wcWords').textContent = words;
             document.getElementById('wcChars').textContent = chars;
             document.getElementById('wcCharsNoSpace').textContent = charsNoSpace;
             wordCountModal.classList.add('show');
         }
 
-        wordCountModal.addEventListener('click', (e) => { 
-            if (e.target === wordCountModal) wordCountModal.classList.remove('show'); 
+        wordCountModal.addEventListener('click', (e) => {
+            if (e.target === wordCountModal) wordCountModal.classList.remove('show');
         });
 
         // Context menu
@@ -1790,14 +2213,25 @@
             showToast('Resolve comment? (You can\'t escape your own thoughts)');
         });
 
-        // Daymare toggle
+        // Daymare doc modal
+        const daymareDocModal = document.getElementById('daymareDocModal');
+
         document.getElementById('daymareLink').addEventListener('click', (e) => {
             e.preventDefault();
-            const daymare = document.getElementById('daymare');
-            const isHidden = daymare.style.display === 'none';
-            daymare.style.display = isHidden ? 'block' : 'none';
-            if (isHidden) {
-                daymare.scrollIntoView({ behavior: 'smooth' });
+            daymareDocModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('daymareCloseBtn').addEventListener('click', () => {
+            daymareDocModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        // Close daymare modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && daymareDocModal.classList.contains('show')) {
+                daymareDocModal.classList.remove('show');
+                document.body.style.overflow = '';
             }
         });
 
@@ -1820,7 +2254,7 @@
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if (e.metaKey || e.ctrlKey) {
-                switch(e.key.toLowerCase()) {
+                switch (e.key.toLowerCase()) {
                     case 'p':
                         e.preventDefault();
                         window.print();
@@ -1857,7 +2291,7 @@
                 if (!res.ok) throw new Error('repo not found');
                 const data = await res.json();
                 // Could display this somewhere if desired
-            } catch (e) {}
+            } catch (e) { }
         }
         fetchLastEdit();
 
@@ -1870,4 +2304,5 @@
         document.getElementById('commentTime').textContent = `Today, ${displayHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
     </script>
 </body>
+
 </html>
