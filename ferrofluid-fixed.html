@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrofluid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #fff; 
+            overflow: hidden; 
+            font-family: 'Jost', sans-serif;
+        }
+        canvas { display: block; cursor: grab; }
+        canvas:active { cursor: grabbing; }
+        
+        .controls {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 16px;
+            z-index: 100;
+        }
+        
+        .btn {
+            background: #000;
+            border: none;
+            color: #fff;
+            padding: 16px 32px;
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border-radius: 50px;
+        }
+        
+        .btn:hover {
+            background: #333;
+            transform: scale(1.02);
+        }
+        
+        .btn.outline {
+            background: transparent;
+            border: 1.5px solid #000;
+            color: #000;
+            border-radius: 50px;
+        }
+        
+        .btn.outline:hover {
+            background: #000;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        
+        .btn.active {
+            background: #000;
+            color: #fff;
+        }
+        
+        input[type="file"] { display: none; }
+        
+        .player {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            align-items: center;
+            gap: 16px;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            padding: 16px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .player.visible {
+            display: flex;
+        }
+        
+        .play-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #000;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.05);
+            background: #333;
+        }
+        
+        .play-btn .icon {
+            width: 18px;
+            height: 18px;
+            color: #fff;
+        }
+        
+        .play-btn .icon.pause {
+            display: none;
+        }
+        
+        .play-btn.playing .icon.play {
+            display: none;
+        }
+        
+        .play-btn.playing .icon.pause {
+            display: block;
+        }
+        
+        .time {
+            font-size: 12px;
+            font-weight: 500;
+            color: #666;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .timeline {
+            width: 200px;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .timeline-progress {
+            height: 100%;
+            background: #000;
+            border-radius: 3px;
+            width: 0%;
+            pointer-events: none;
+        }
+        
+        .timeline-handle {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+        
+        .timeline:hover .timeline-handle {
+            opacity: 1;
+        }
+        
+        .info {
+            position: fixed;
+            top: 32px;
+            left: 32px;
+            z-index: 100;
+        }
+        
+        .info .title {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        
+        .info .status {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .params-toggle {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #000;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 101;
+            transition: all 0.25s ease;
+        }
+        
+        .params-toggle:hover {
+            background: #333;
+            transform: scale(1.05);
+        }
+        
+        .params-toggle svg {
+            width: 18px;
+            height: 18px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+        
+        .params-toggle.active svg {
+            transform: rotate(90deg);
+        }
+        
+        .params-panel {
+            position: fixed;
+            top: 88px;
+            right: 32px;
+            width: 240px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 24px;
+            z-index: 100;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+        
+        .params-panel.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .param-group {
+            margin-bottom: 20px;
+        }
+        
+        .param-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        .param-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .param-label span {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #000;
+        }
+        
+        .param-label .value {
+            font-size: 11px;
+            color: #666;
+            font-weight: 400;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+        
+        .param-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .param-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+        
+        .param-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+        
+        .param-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div class="title">Ferrofluid</div>
+        <div class="status" id="status">Awaiting input</div>
+    </div>
+    
+    <button class="params-toggle" id="paramsToggle" title="Parameters">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v6m0 6v10M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m6 0h10M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/>
+        </svg>
+    </button>
+    
+    <div class="params-panel" id="paramsPanel">
+        <div class="param-group">
+            <div class="param-label">
+                <span>Size</span>
+                <span class="value" id="sizeValue">0.60</span>
+            </div>
+            <input type="range" class="param-slider" id="sizeSlider" min="0.3" max="1.0" step="0.01" value="0.6">
+        </div>
+        <div class="param-group">
+            <div class="param-label">
+                <span>Spike Height</span>
+                <span class="value" id="spikeValue">0.25</span>
+            </div>
+            <input type="range" class="param-slider" id="spikeSlider" min="0.05" max="0.6" step="0.01" value="0.25">
+        </div>
+        <div class="param-group">
+            <div class="param-label">
+                <span>Rotation</span>
+                <span class="value" id="rotationValue">1.00</span>
+            </div>
+            <input type="range" class="param-slider" id="rotationSlider" min="0" max="3" step="0.05" value="1">
+        </div>
+        <div class="param-group">
+            <div class="param-label">
+                <span>Audio React</span>
+                <span class="value" id="reactivityValue">1.00</span>
+            </div>
+            <input type="range" class="param-slider" id="reactivitySlider" min="0" max="2" step="0.05" value="1">
+        </div>
+    </div>
+    
+    <div class="player" id="player">
+        <button class="play-btn" id="playBtn">
+            <svg class="icon play" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg class="icon pause" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+        </button>
+        <div class="time" id="currentTime">0:00</div>
+        <div class="timeline" id="timeline">
+            <div class="timeline-progress" id="timelineProgress"></div>
+            <div class="timeline-handle" id="timelineHandle"></div>
+        </div>
+        <div class="time" id="totalTime">0:00</div>
+    </div>
+    
+    <div class="controls">
+        <button class="btn" id="micBtn">Microphone</button>
+        <label class="btn outline" id="fileLabel">
+            Load Audio
+            <input type="file" id="audioFile" accept="audio/*">
+        </label>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+
+        let audioContext, analyser, dataArray;
+        let audioBuffer = null;
+        let sourceNode = null;
+        let isAudioActive = false;
+        let isPlaying = false;
+        let startTime = 0;
+        let pauseTime = 0;
+        let currentFileName = '';
+        let analyserConnectedToDestination = false;
+
+        const audio = {
+            bass: 0,
+            mid: 0,
+            high: 0,
+            amplitude: 0,
+            transient: 0,
+            prevAmplitude: 0
+        };
+
+        const drag = {
+            isDragging: false,
+            current: { x: 0, y: 0 },
+            target: { x: 0, y: 0 },
+            velocity: { x: 0, y: 0 },
+            lastMouse: { x: 0, y: 0 }
+        };
+
+        const smooth = 0.85;
+        const transientDecay = 0.88;
+        const dragSmooth = 0.12;
+        const dragDamping = 0.95;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.z = 4;
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        document.body.appendChild(renderer.domElement);
+
+        const vertexShader = `
+            varying vec2 vUv;
+            void main() {
+                vUv = uv;
+                gl_Position = vec4(position, 1.0);
+            }
+        `;
+
+        const fragmentShader = `
+            precision highp float;
+            
+            uniform float time;
+            uniform vec2 resolution;
+            uniform float bass;
+            uniform float mid;
+            uniform float high;
+            uniform float amplitude;
+            uniform float transient;
+            uniform vec2 blobPosition;
+            uniform vec2 blobVelocity;
+            uniform float baseSize;
+            uniform float spikeIntensity;
+            uniform float rotationSpeed;
+            uniform float audioReactivity;
+            
+            #define MAX_STEPS 80
+            #define MAX_DIST 20.0
+            #define SURF_DIST 0.001
+            #define PI 3.14159265359
+            
+            vec3 rotY(vec3 p, float a) {
+                float c = cos(a), s = sin(a);
+                return vec3(c*p.x + s*p.z, p.y, -s*p.x + c*p.z);
+            }
+            
+            vec3 rotX(vec3 p, float a) {
+                float c = cos(a), s = sin(a);
+                return vec3(p.x, c*p.y - s*p.z, s*p.y + c*p.z);
+            }
+            
+            vec2 toSpherical(vec3 p) {
+                float r = length(p);
+                return vec2(
+                    atan(p.z, p.x),
+                    acos(p.y / max(r, 0.001))
+                );
+            }
+            
+            float spikePattern(vec3 dir, float t) {
+                vec2 sph = toSpherical(dir);
+                float theta = sph.x;
+                float phi = sph.y;
+                
+                float s1 = cos(theta * 3.0 + t * 0.2) * cos(phi * 4.0 - t * 0.15);
+                s1 = pow(max(0.0, s1), 2.0);
+                
+                float s2 = cos(theta * 5.0 - t * 0.25) * cos(phi * 6.0 + t * 0.18);
+                s2 = pow(max(0.0, s2), 2.5);
+                
+                float s3 = cos(theta * 8.0 + t * 0.3) * cos(phi * 9.0 - t * 0.22);
+                s3 = pow(max(0.0, s3), 3.0);
+                
+                float s4 = cos(theta * 4.0 + phi * 5.0 + t * 0.15);
+                s4 = pow(max(0.0, s4), 2.0);
+                
+                return s1 * 0.5 + s2 * 0.3 + s3 * 0.15 + s4 * 0.25;
+            }
+            
+            float ferrofluid(vec3 p) {
+                p.x -= blobPosition.x;
+                p.y -= blobPosition.y;
+                
+                float speed = length(blobVelocity);
+                vec2 velDir = speed > 0.001 ? normalize(blobVelocity) : vec2(0.0);
+                float stretch = min(speed * 0.08, 0.08);
+                p.x *= 1.0 - velDir.x * velDir.x * stretch;
+                p.y *= 1.0 - velDir.y * velDir.y * stretch;
+                
+                p = rotY(p, time * 0.15 * rotationSpeed);
+                p = rotX(p, time * 0.1 * rotationSpeed);
+                
+                float baseRadius = baseSize + amplitude * 0.15 * audioReactivity;
+                float r = length(p);
+                vec3 dir = p / max(r, 0.001);
+                
+                float spikeHeight = spikeIntensity + bass * 0.6 * audioReactivity + transient * 0.4 * audioReactivity;
+                float spikeSharpness = 1.0 + mid * 0.5 * audioReactivity;
+                float t = time * (0.8 + high * 0.4 * audioReactivity);
+                
+                float spikes = spikePattern(dir, t);
+                spikes = pow(spikes, 1.0 / spikeSharpness);
+                
+                float fieldBias = 0.7 + 0.3 * pow(abs(dir.y), 0.5);
+                spikes *= fieldBias;
+                
+                float wobble = min(speed, 1.0) * 0.03 * sin(time * 8.0 + r * 4.0);
+                
+                return r - baseRadius - spikes * spikeHeight - wobble;
+            }
+            
+            float raymarch(vec3 ro, vec3 rd) {
+                float d = 0.0;
+                for(int i = 0; i < MAX_STEPS; i++) {
+                    vec3 p = ro + rd * d;
+                    float dist = ferrofluid(p);
+                    d += dist;
+                    if(dist < SURF_DIST || d > MAX_DIST) break;
+                }
+                return d;
+            }
+            
+            vec3 getNormal(vec3 p) {
+                float e = 0.001;
+                return normalize(vec3(
+                    ferrofluid(p + vec3(e,0,0)) - ferrofluid(p - vec3(e,0,0)),
+                    ferrofluid(p + vec3(0,e,0)) - ferrofluid(p - vec3(0,e,0)),
+                    ferrofluid(p + vec3(0,0,e)) - ferrofluid(p - vec3(0,0,e))
+                ));
+            }
+            
+            void main() {
+                vec2 uv = (gl_FragCoord.xy - 0.5 * resolution.xy) / resolution.y;
+                
+                vec3 ro = vec3(0.0, 0.0, 2.8);
+                vec3 rd = normalize(vec3(uv, -1.0));
+                
+                vec3 bg = vec3(1.0);
+                
+                float d = raymarch(ro, rd);
+                
+                vec3 col = bg;
+                
+                if(d < MAX_DIST) {
+                    vec3 p = ro + rd * d;
+                    vec3 n = getNormal(p);
+                    vec3 v = -rd;
+                    
+                    vec3 refl = reflect(rd, n);
+                    
+                    float envGrad = refl.y * 0.5 + 0.5;
+                    vec3 env = mix(vec3(0.02), vec3(0.35), pow(envGrad, 2.0));
+                    
+                    float fresnel = pow(1.0 - max(0.0, dot(n, v)), 5.0);
+                    fresnel = 0.15 + 0.85 * fresnel;
+                    
+                    vec3 l1 = normalize(vec3(2.0, 3.0, 2.0));
+                    vec3 l2 = normalize(vec3(-2.0, 2.0, 1.0));
+                    vec3 l3 = normalize(vec3(0.0, -1.0, 2.0));
+                    
+                    float spec1 = pow(max(0.0, dot(refl, l1)), 150.0) * 1.5;
+                    float spec2 = pow(max(0.0, dot(refl, l2)), 100.0) * 1.0;
+                    float spec3 = pow(max(0.0, dot(refl, l3)), 60.0) * 0.7;
+                    float specBroad = pow(max(0.0, dot(refl, l1)), 15.0) * 0.25;
+                    
+                    float rim = pow(1.0 - max(0.0, dot(n, v)), 3.0);
+                    
+                    vec3 chrome = vec3(0.01);
+                    chrome += env * fresnel * 0.5;
+                    chrome += vec3(spec1 + spec2 + spec3 + specBroad);
+                    chrome += vec3(rim * 0.35);
+                    
+                    // Tonemap only the chrome, not the background
+                    chrome = chrome / (chrome + vec3(1.0));
+                    chrome = pow(chrome, vec3(0.9));
+                    
+                    col = chrome;
+                }
+                
+                gl_FragColor = vec4(col, 1.0);
+            }
+        `;
+
+        const material = new THREE.ShaderMaterial({
+            vertexShader,
+            fragmentShader,
+            uniforms: {
+                time: { value: 0 },
+                resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+                bass: { value: 0 },
+                mid: { value: 0 },
+                high: { value: 0 },
+                amplitude: { value: 0 },
+                transient: { value: 0 },
+                blobPosition: { value: new THREE.Vector2(0, 0) },
+                blobVelocity: { value: new THREE.Vector2(0, 0) },
+                baseSize: { value: 0.6 },
+                spikeIntensity: { value: 0.25 },
+                rotationSpeed: { value: 1.0 },
+                audioReactivity: { value: 1.0 }
+            }
+        });
+
+        const geometry = new THREE.PlaneGeometry(2, 2);
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        function screenToWorld(x, y) {
+            const aspect = window.innerWidth / window.innerHeight;
+            return {
+                x: ((x / window.innerWidth) * 2 - 1) * aspect * 1.8,
+                y: -((y / window.innerHeight) * 2 - 1) * 1.8
+            };
+        }
+
+        renderer.domElement.addEventListener('mousedown', (e) => {
+            drag.isDragging = true;
+            drag.lastMouse = screenToWorld(e.clientX, e.clientY);
+        });
+
+        renderer.domElement.addEventListener('mousemove', (e) => {
+            if (!drag.isDragging) return;
+            const pos = screenToWorld(e.clientX, e.clientY);
+            drag.target.x += pos.x - drag.lastMouse.x;
+            drag.target.y += pos.y - drag.lastMouse.y;
+            // Smooth velocity calculation and clamp to prevent spasms
+            const vx = (pos.x - drag.lastMouse.x) * 30;
+            const vy = (pos.y - drag.lastMouse.y) * 30;
+            drag.velocity.x = drag.velocity.x * 0.7 + vx * 0.3;
+            drag.velocity.y = drag.velocity.y * 0.7 + vy * 0.3;
+            // Clamp velocity
+            const maxVel = 2.0;
+            drag.velocity.x = Math.max(-maxVel, Math.min(maxVel, drag.velocity.x));
+            drag.velocity.y = Math.max(-maxVel, Math.min(maxVel, drag.velocity.y));
+            drag.lastMouse = pos;
+        });
+
+        renderer.domElement.addEventListener('mouseup', () => { drag.isDragging = false; });
+        renderer.domElement.addEventListener('mouseleave', () => { drag.isDragging = false; });
+
+        renderer.domElement.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            drag.isDragging = true;
+            drag.lastMouse = screenToWorld(e.touches[0].clientX, e.touches[0].clientY);
+        }, { passive: false });
+
+        renderer.domElement.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            if (!drag.isDragging) return;
+            const pos = screenToWorld(e.touches[0].clientX, e.touches[0].clientY);
+            drag.target.x += pos.x - drag.lastMouse.x;
+            drag.target.y += pos.y - drag.lastMouse.y;
+            // Smooth velocity calculation and clamp to prevent spasms
+            const vx = (pos.x - drag.lastMouse.x) * 30;
+            const vy = (pos.y - drag.lastMouse.y) * 30;
+            drag.velocity.x = drag.velocity.x * 0.7 + vx * 0.3;
+            drag.velocity.y = drag.velocity.y * 0.7 + vy * 0.3;
+            // Clamp velocity
+            const maxVel = 2.0;
+            drag.velocity.x = Math.max(-maxVel, Math.min(maxVel, drag.velocity.x));
+            drag.velocity.y = Math.max(-maxVel, Math.min(maxVel, drag.velocity.y));
+            drag.lastMouse = pos;
+        }, { passive: false });
+
+        renderer.domElement.addEventListener('touchend', () => { drag.isDragging = false; });
+
+        function processAudio() {
+            if (!analyser || !isAudioActive) return;
+            
+            analyser.getByteFrequencyData(dataArray);
+            
+            const bufferLength = analyser.frequencyBinCount;
+            const nyquist = audioContext.sampleRate / 2;
+            const binSize = nyquist / bufferLength;
+            
+            const bassEnd = Math.floor(200 / binSize);
+            const midEnd = Math.floor(2000 / binSize);
+            
+            let bassSum = 0, midSum = 0, highSum = 0, total = 0;
+            
+            for (let i = 0; i < bufferLength; i++) {
+                const val = dataArray[i] / 255;
+                total += val;
+                if (i < bassEnd) bassSum += val;
+                else if (i < midEnd) midSum += val;
+                else highSum += val;
+            }
+            
+            const bassNorm = bassSum / bassEnd;
+            const midNorm = midSum / (midEnd - bassEnd);
+            const highNorm = highSum / (bufferLength - midEnd);
+            const ampNorm = total / bufferLength;
+            
+            audio.bass = audio.bass * smooth + bassNorm * (1 - smooth);
+            audio.mid = audio.mid * smooth + midNorm * (1 - smooth);
+            audio.high = audio.high * smooth + highNorm * (1 - smooth);
+            audio.amplitude = audio.amplitude * smooth + ampNorm * (1 - smooth);
+            
+            const delta = ampNorm - audio.prevAmplitude;
+            if (delta > 0.04) {
+                audio.transient = Math.min(1, audio.transient + delta * 4.0);
+            }
+            audio.transient *= transientDecay;
+            audio.prevAmplitude = ampNorm;
+        }
+
+        function updateDrag() {
+            drag.current.x += (drag.target.x - drag.current.x) * dragSmooth;
+            drag.current.y += (drag.target.y - drag.current.y) * dragSmooth;
+            
+            // Dampen velocity when not dragging
+            if (!drag.isDragging) {
+                drag.velocity.x *= dragDamping;
+                drag.velocity.y *= dragDamping;
+            }
+        }
+
+        async function startMicrophone() {
+            try {
+                // Create audio context on first use
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    analyser = audioContext.createAnalyser();
+                    analyser.fftSize = 512;
+                    analyser.smoothingTimeConstant = 0.8;
+                    dataArray = new Uint8Array(analyser.frequencyBinCount);
+                }
+                
+                // Resume if suspended
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                // Stop file audio if playing
+                if (sourceNode) {
+                    sourceNode.onended = null;  // Remove callback BEFORE stopping
+                    sourceNode.stop();
+                    sourceNode.disconnect();
+                    sourceNode = null;
+                }
+                isPlaying = false;
+                
+                // Disconnect analyser from destination to avoid feedback
+                if (analyserConnectedToDestination) {
+                    analyser.disconnect(audioContext.destination);
+                    analyserConnectedToDestination = false;
+                }
+                
+                document.getElementById('player').classList.remove('visible');
+                
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                const micSource = audioContext.createMediaStreamSource(stream);
+                micSource.connect(analyser);
+                // Don't connect to destination - we don't want to hear ourselves
+                
+                isAudioActive = true;
+                document.getElementById('status').textContent = 'Listening';
+                document.getElementById('micBtn').classList.add('active');
+            } catch (err) {
+                document.getElementById('status').textContent = 'Microphone denied';
+            }
+        }
+
+        async function handleFile(file) {
+            try {
+                console.log('handleFile called with:', file.name, file.type, file.size);
+                document.getElementById('status').textContent = 'Loading: ' + file.name;
+                currentFileName = file.name;
+                
+                // Create audio context on first use
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    analyser = audioContext.createAnalyser();
+                    analyser.fftSize = 512;
+                    analyser.smoothingTimeConstant = 0.8;
+                    dataArray = new Uint8Array(analyser.frequencyBinCount);
+                    console.log('AudioContext created, state:', audioContext.state);
+                }
+                
+                // Ensure analyser is connected to destination for file playback
+                if (!analyserConnectedToDestination) {
+                    analyser.connect(audioContext.destination);
+                    analyserConnectedToDestination = true;
+                    console.log('Analyser connected to destination');
+                }
+                
+                // Resume if suspended
+                if (audioContext.state === 'suspended') {
+                    await audioContext.resume();
+                    console.log('AudioContext resumed');
+                }
+                
+                // Stop current playback if any
+                if (sourceNode) {
+                    sourceNode.onended = null;  // Remove callback BEFORE stopping
+                    sourceNode.stop();
+                    sourceNode.disconnect();
+                    sourceNode = null;
+                }
+                isPlaying = false;
+                pauseTime = 0;
+                
+                // Read file as ArrayBuffer
+                console.log('Reading file as ArrayBuffer...');
+                const arrayBuffer = await file.arrayBuffer();
+                console.log('ArrayBuffer size:', arrayBuffer.byteLength);
+                
+                // Decode audio data
+                console.log('Decoding audio data...');
+                audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+                console.log('Audio decoded, duration:', audioBuffer.duration);
+                
+                // Update UI
+                document.getElementById('totalTime').textContent = formatTime(audioBuffer.duration);
+                document.getElementById('player').classList.add('visible');
+                document.getElementById('micBtn').classList.remove('active');
+                
+                // Start playback
+                startPlayback(0);
+                
+            } catch (err) {
+                console.error('handleFile error:', err);
+                document.getElementById('status').textContent = 'Error: ' + err.message;
+            }
+        }
+        
+        function startPlayback(fromTime) {
+            if (!audioBuffer) return;
+            
+            // Stop existing source if any
+            if (sourceNode) {
+                sourceNode.onended = null;  // Remove callback BEFORE stopping to prevent race condition
+                sourceNode.stop();
+                sourceNode.disconnect();
+                sourceNode = null;
+            }
+            
+            // Create new source node (required each time we play)
+            sourceNode = audioContext.createBufferSource();
+            sourceNode.buffer = audioBuffer;
+            sourceNode.connect(analyser);
+            
+            // Handle track end (mostly for edge cases not caught by animation loop)
+            sourceNode.onended = () => {
+                // Only reset if this source is still the active one and we're supposed to be playing
+                if (isPlaying && sourceNode === currentSource) {
+                    isPlaying = false;
+                    pauseTime = 0;
+                    document.getElementById('playBtn').classList.remove('playing');
+                    document.getElementById('status').textContent = 'Ended';
+                    updateTimelineUI(0);
+                }
+            };
+            
+            // Store reference to this source for onended check
+            const currentSource = sourceNode;
+            
+            // Start playback
+            startTime = audioContext.currentTime - fromTime;
+            sourceNode.start(0, fromTime);
+            isPlaying = true;
+            isAudioActive = true;
+            document.getElementById('playBtn').classList.add('playing');
+            document.getElementById('status').textContent = currentFileName;
+            console.log('Playback started from:', fromTime);
+        }
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        function getCurrentTime() {
+            if (!audioBuffer) return 0;
+            if (!isPlaying) return Math.min(pauseTime, audioBuffer.duration);
+            const time = audioContext.currentTime - startTime;
+            return Math.max(0, Math.min(time, audioBuffer.duration));
+        }
+        
+        function updateTimelineUI(currentTime) {
+            if (!audioBuffer) return;
+            const progress = (currentTime / audioBuffer.duration) * 100;
+            document.getElementById('timelineProgress').style.width = `${progress}%`;
+            document.getElementById('timelineHandle').style.left = `${progress}%`;
+            document.getElementById('currentTime').textContent = formatTime(currentTime);
+        }
+        
+        function togglePlayPause() {
+            if (!audioBuffer) return;
+            
+            if (isPlaying) {
+                // Pause: store current position and stop
+                pauseTime = getCurrentTime();
+                if (sourceNode) {
+                    sourceNode.onended = null;  // Remove callback BEFORE stopping
+                    sourceNode.stop();
+                    sourceNode.disconnect();
+                    sourceNode = null;
+                }
+                isPlaying = false;
+                document.getElementById('playBtn').classList.remove('playing');
+            } else {
+                // Play: start from paused position
+                startPlayback(pauseTime);
+            }
+        }
+        
+        function seekTo(e) {
+            if (!audioBuffer) return;
+            const timeline = document.getElementById('timeline');
+            const rect = timeline.getBoundingClientRect();
+            const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            const seekTime = Math.max(0, Math.min(percent * audioBuffer.duration, audioBuffer.duration - 0.01));
+            
+            if (isPlaying) {
+                // Restart playback from new position
+                startPlayback(seekTime);
+            } else {
+                // Just update the pause position
+                pauseTime = seekTime;
+                updateTimelineUI(seekTime);
+            }
+        }
+
+        document.getElementById('micBtn').addEventListener('click', startMicrophone);
+        document.getElementById('audioFile').addEventListener('change', (e) => {
+            console.log('File input changed, files:', e.target.files);
+            if (e.target.files[0]) {
+                handleFile(e.target.files[0]);
+            } else {
+                console.log('No file selected');
+            }
+        });
+        document.getElementById('playBtn').addEventListener('click', togglePlayPause);
+        document.getElementById('timeline').addEventListener('click', seekTo);
+        
+        // Parameters panel
+        const paramsToggle = document.getElementById('paramsToggle');
+        const paramsPanel = document.getElementById('paramsPanel');
+        
+        paramsToggle.addEventListener('click', () => {
+            paramsToggle.classList.toggle('active');
+            paramsPanel.classList.toggle('visible');
+        });
+        
+        // Slider handlers
+        document.getElementById('sizeSlider').addEventListener('input', (e) => {
+            const value = parseFloat(e.target.value);
+            material.uniforms.baseSize.value = value;
+            document.getElementById('sizeValue').textContent = value.toFixed(2);
+        });
+        
+        document.getElementById('spikeSlider').addEventListener('input', (e) => {
+            const value = parseFloat(e.target.value);
+            material.uniforms.spikeIntensity.value = value;
+            document.getElementById('spikeValue').textContent = value.toFixed(2);
+        });
+        
+        document.getElementById('rotationSlider').addEventListener('input', (e) => {
+            const value = parseFloat(e.target.value);
+            material.uniforms.rotationSpeed.value = value;
+            document.getElementById('rotationValue').textContent = value.toFixed(2);
+        });
+        
+        document.getElementById('reactivitySlider').addEventListener('input', (e) => {
+            const value = parseFloat(e.target.value);
+            material.uniforms.audioReactivity.value = value;
+            document.getElementById('reactivityValue').textContent = value.toFixed(2);
+        });
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            material.uniforms.resolution.value.set(window.innerWidth, window.innerHeight);
+        });
+
+        function animate(time) {
+            requestAnimationFrame(animate);
+            processAudio();
+            updateDrag();
+            
+            // Update timeline UI only when playing or paused with a buffer
+            if (audioBuffer && isPlaying) {
+                const currentTime = getCurrentTime();
+                updateTimelineUI(currentTime);
+                
+                // Auto-stop if we've reached the end (safety check)
+                if (currentTime >= audioBuffer.duration - 0.05) {
+                    if (sourceNode) {
+                        sourceNode.onended = null;
+                        sourceNode.stop();
+                        sourceNode.disconnect();
+                        sourceNode = null;
+                    }
+                    isPlaying = false;
+                    pauseTime = 0;
+                    document.getElementById('playBtn').classList.remove('playing');
+                    document.getElementById('status').textContent = 'Ended';
+                    updateTimelineUI(0);
+                }
+            }
+            
+            material.uniforms.time.value = time * 0.001;
+            material.uniforms.bass.value = audio.bass;
+            material.uniforms.mid.value = audio.mid;
+            material.uniforms.high.value = audio.high;
+            material.uniforms.amplitude.value = audio.amplitude;
+            material.uniforms.transient.value = audio.transient;
+            // Clamp position to prevent extreme values
+            const maxPos = 3.0;
+            const clampedX = Math.max(-maxPos, Math.min(maxPos, drag.current.x));
+            const clampedY = Math.max(-maxPos, Math.min(maxPos, drag.current.y));
+            material.uniforms.blobPosition.value.set(clampedX, clampedY);
+            material.uniforms.blobVelocity.value.set(drag.velocity.x, drag.velocity.y);
+            
+            renderer.render(scene, camera);
+        }
+        
+        animate(0);
+    </script>
+</body>
+</html>
