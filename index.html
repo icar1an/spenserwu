@@ -792,13 +792,48 @@
         .project-details {
             margin: 4px 0 12px 24px;
             padding: 0;
-            list-style-type: disc;
+            list-style-type: none;
             color: #5f6368;
             font-size: 10pt;
         }
 
-        .project-details li {
+        .project-details>li {
             margin-bottom: 2px;
+            line-height: 1.4;
+            list-style-type: disc;
+        }
+
+        .project-details details {
+            margin-bottom: 2px;
+        }
+
+        .project-details summary {
+            cursor: pointer;
+            line-height: 1.4;
+            outline: none;
+            padding-left: 4px;
+        }
+
+        .project-details summary:hover {
+            color: #202124;
+        }
+
+        .project-details summary::marker {
+            color: #9aa0a6;
+            font-size: 0.7em;
+        }
+
+        .project-details details[open] summary {
+            color: #202124;
+        }
+
+        .project-details details[open] summary::marker {
+            color: #5f6368;
+        }
+
+        .project-details .detail-full {
+            margin-top: 4px;
+            padding-left: 20px;
             line-height: 1.4;
         }
 
@@ -2048,11 +2083,24 @@
                     return `<a ${attrs}>${text}</a>`;
                 };
 
-                // Custom list renderer - add project-details class to ul
+                // Custom list renderer - add project-details class with collapsible items
                 renderer.list = ({ items, ordered }) => {
                     const tag = ordered ? 'ol' : 'ul';
                     const className = ordered ? '' : ' class="project-details"';
-                    const body = items.map(item => `<li>${item.text}</li>`).join('');
+                    const body = items.map(item => {
+                        const text = item.text;
+                        // Extract first sentence as the summary preview
+                        const sentenceEnd = text.search(/[.!?](?:\s|$|<)/);
+                        if (sentenceEnd !== -1 && sentenceEnd < text.length - 2) {
+                            const preview = text.substring(0, sentenceEnd + 1);
+                            const rest = text.substring(sentenceEnd + 1).trim();
+                            if (rest.length > 0) {
+                                return `<li><details><summary>${preview}</summary><div class="detail-full">${rest}</div></details></li>`;
+                            }
+                        }
+                        // Short items don't need collapsing
+                        return `<li>${text}</li>`;
+                    }).join('');
                     return `<${tag}${className}>${body}</${tag}>`;
                 };
 
