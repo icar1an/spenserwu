@@ -71,4 +71,14 @@ christophe lemaire, hengdi wang, jil sander, hedi slimane, ricardo tisci
 
 ---
 
+**proof of influence**
+
+[why not you — togi](https://www.youtube.com/watch?v=HsT_uVz2q38&t=3203s)
+- credit this one with pulling me out of a huge mental rut
+
+[russ hanneman pitch — silicon valley](https://www.youtube.com/watch?v=C0nIWMKfzGY)
+- even though he was talking to richard this was sage advice
+
+---
+
 [email](mailto:spenser.f.wu@gmail.com) · [x](https://x.com/kytherax) · [instagram](https://www.instagram.com/spensewu/) · [github](https://github.com/icar1an) · [steal my clothes](https://www.grailed.com/icarian)
