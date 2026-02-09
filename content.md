@@ -27,7 +27,7 @@
 - new thesis: unless you have insane distribution/credibility in the industry, DO NOT try to build fashiontech. nobody needs the 2892 wardrobe/OOTD app or "tinder for clothes", just spend more money on clothes and learn how to get clothes from ebay/grailed/depop/vinted/vestaire collective/the realreal. you cannot shortcut the taste acquisition process, downloading apps to become more fashionable is like reading the sparknotes for tolstoy and expecting to be on par with someone who read the actual book. it's ridiculous, naive, and incredibly low signal
 
 
-[clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — open source anti-ai slop chrome extension built with @CarolineZhu, [whitepaper](Clarity Whitepaper.pdf) available now
+[clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — open source anti-ai slop chrome extension built with @CarolineZhu, [whitepaper](Clarity%20Whitepaper.pdf) available now
 - made this because I hated the amount of AI content I was getting recommended on YouTube, pulled multiple all nighters to jumpstart the dataset and get it to a point where I could train some models for classification
 - the breakthrough was realizing that an AI content creator has a completely different incentive system than a human creator, they make money from output not quality and therefore exhibit completely different posting behaviors
 - this isn't something they can hide so a simple XGBoost model can filter out around 70% of AI channels right off the bat based on publicly avaliable data like comments, likes, views fetched from the YouTube API
