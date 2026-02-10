@@ -19,7 +19,7 @@
 - built wink controls, auditory feedback (so so satisfying), and also ended up consolidating some of the detected modes
 - the beauty of headsurf is that it's so stupid the product literally markets itself. you can film infinite UGC by using it to scroll brainrot or play games in lectures, or even scroll multiple reels at once which is simply disgusting
 - in the process of rapidly building out the product, a new thesis came to mind. keyboards are reductivistic and need to be made obsolete. technology should not constrain our instincts, and instead be built around them. the keyboard has been around for less than 150 years, compared to gestures which we have been doing for over 10,000. you should be able to control any content on screens through pure head/hand movement without additional haptic hardware. 
-- now turning this into a gesture based way for people to interact with AI coding IDEs, if you're not coding with surf in 2026 ur ngmi 
+- unironically this would be really great for accessibility. I will need it since my neck is beyond repair atp
 
 [mode](https://chromewebstore.google.com/detail/mode-fashion-discovery-re/bbgigkgmodajaobdfalekpaolpolebnm) - fashion tech thingy for chrome
 - if you follow me you'll know my eLab project was for fashiontech, but appdev on that front was a real pain and taking too long so I ended up shipping this to validate if the market wanted a product like this
@@ -63,13 +63,14 @@
 *skincare*
 round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oil
 
-- this was a long journey. for skincare my general advice is to start from first principles YEAH I SAID IT AGAIN WHAT ARE YOU GONNA DO ABOUT IT?? my skin is oily/rosacea prone and through much experimentation I found the best approach focuses on restoration and not suppressing symptoms. madecassoside + ceramides are king, the only brand that mixes them well with minimal irritation and fragrances is PKY. sunscreens round lab works pretty well, torriden is fine as well. about to try the haruharu black rice one perhaps it will be good? double cleaning is also super important, the muji oil is actually better than the manyo imo since it doesn't hurt if you get it in your eyes. FANCL is even better tho. to get rid of acne just use adapalene for a while, actually magic. 
+- this was a long journey. for skincare my general advice is to start from first principles. my skin is oily/rosacea prone and through much experimentation I found the best approach focuses on restoration and not suppressing symptoms. madecassoside + ceramides are king, the only brand that mixes them well with minimal irritation and fragrances is PKY. sunscreens round lab works pretty well, torriden is fine as well. about to try the haruharu black rice one perhaps it will be good? double cleaning is also super important, the muji oil is actually better than the manyo imo since it doesn't hurt if you get it in your eyes. FANCL is even better tho. to get rid of acne just use adapalene for a while, actually magic. 
 
 *fragrance*
 current: edit(h) earl grey/diptyque philosykos
 previous: d'annam white rice, one day taipei
 
 - originally got into fragrances for a very shallow reason, but ended up falling in love with them once I realized how what is literally scented water can completely change your mood. started with blue masculine mens fragrances, then went through a white musk/floral phase, green herbal/botanical, now exploring masculine scents again but with a more nuanced and fresh perspective. really crazy how the same outfit can be radically different based on what fragrance you pair with it, trying to pare my collection down to 4 max ideally just one. 
+- the previous fragrances I no longer use would be perfect for someone who loves light academia, trust me on that
 
 *designers (aesthetically)*
 christophe lemaire, hengdi wang, jil sander, hedi slimane, ricardo tisci
