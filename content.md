@@ -1,13 +1,13 @@
 **proof of agency**
 
 [arbicart](https://arbicart.spenserwu.com) — geoarb your groceries (hypothetically)
-- I've always been fascinated by price discrimination because it is the ultimate end game of late stage capitalism x enshittification of nice things for consumers. the idea of being able to charge people exactly what they're willing to pay and extracting maximum profit is just wow. then again if you dig up one of my old twitter posts you will realize that is a fantasy and does not work for most consumer goods (good luck charging mark zuckerberg 200k for airpods)
+- I've always been fascinated by price discrimination because it is the ultimate end game of late stage capitalism x enshittification of nice things for consumers. the idea of being able to charge people exactly what they're willing to pay and extracting maximum profit is just wow. then again if you dig up one of my old twitter posts you will realize that is a fantasy and does not work for most consumer goods (good luck charging mark zuckerberg 200k for airpods). should probably decide if I'm going to side with consumers or corpos on this one soon
 - really got started thinking about this months ago when I spoke to alum @SethSarelson, who sold his digital couponing company for an undisclosed amount of money. funny thing about price discrimination is that if it is presented in the form of a dynamic coupon, people who get different coupons don't feel ripped off even though they are being price discriminated against since they feel like the person who got the better coupon was more skilled (insane ikr)
 - he told me if you book your flights with terrible computers/cell phones in ZIP codes with lower median income, you can finesse better prices which absolutely blew my mind
 - this ties into another one of my theses, which is that any company like instacart that coordinates transportation of physical goods from retail to consumer or companies like uber that do ride hailing would obviously use what data they have to optimize prices in different regions
 - surprisingly when I explored the actual data, I found that wegmans charged the same prices through instacart no matter what region of ithaca I set my residency to (so so expensive to pay for apify in order to discover this)
 - since I had already hard committed to the project at this point I figured it would be interesting to map the price of a basket of consumer goods in the Ithaca region cross zip codes to see if there was any meaningful price difference to exploit (spoilers: no. you would spend more on gas and opportunity cost than trying to geoarb your groceries)
-- however, this was a ton of fun to pull off and inspired several other projects I am going to work on. orchestrated the whole thing with running multiple agents in parallel thinking about running swarms, and also used designprompts.dev to make the website (shoutout @BenKoppe for putting me on game, loving the neo brutalism)
+- however, this was a ton of fun to pull off and inspired several other projects I am going to work on. orchestrated the whole thing with running multiple agents in parallel thinking about running agent swarms, and also used designprompts.dev to make the website (shoutout @BenKoppe for putting me on game, loving the neo brutalism)
 
 [head.surf](https://head.surf) — scroll reels/tiktoks/shorts handlessly, surf any webapp 🏄‍♂️🏄‍♂️🏄‍♂️
 - the story behind this is insane. originally was working with @BenKoppe on adtech, but we got distracted by instagram reels during a roadblock. suddenly came up with a thesis: in the age where anyone can build anything, distribution is king. unless you have money to burn on marketing or are an influencer already/know ones willing to work for free in a relevant niche, you have to build products to enable repeatable content with virality potential. once you cultivate an audience, you ship your actual product
@@ -28,15 +28,17 @@
 - new thesis: unless you have insane distribution/credibility in the industry, DO NOT try to build fashiontech. nobody needs the 2892 wardrobe/OOTD app or "tinder for clothes", just spend more money on clothes and learn how to get clothes from ebay/grailed/depop/vinted/vestaire collective/the realreal. you cannot shortcut the taste acquisition process, downloading apps to become more fashionable is like reading the sparknotes for tolstoy and expecting to be on par with someone who read the actual book. it's ridiculous, naive, and incredibly low signal
 
 
-[clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — open source anti-ai slop chrome extension built with @CarolineZhu, [whitepaper](Clarity%20Whitepaper.pdf) available now
+[clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — open source anti-ai slop chrome extension [whitepaper](Clarity%20Whitepaper.pdf) available now
 - made this because I hated the amount of AI content I was getting recommended on YouTube, pulled multiple all nighters to jumpstart the dataset and get it to a point where I could train some models for classification
 - the breakthrough was realizing that an AI content creator has a completely different incentive system than a human creator, they make money from output not quality and therefore exhibit completely different posting behaviors
 - this isn't something they can hide so a simple XGBoost model can filter out around 70% of AI channels right off the bat based on publicly avaliable data like comments, likes, views fetched from the YouTube API
 - however AI slop channels would have the incentive to lie about their content type. this led me to spend a few days thinking of a mechanism that rewards honest users and punishes people who try to sabotage the classification system
 - after much self learning in game theory I realized that you do this with a simple group consensus mechanism and shadowban people who go against what the community thinks. someone who has good intentions but horrible accuracy at identifying AI content is as harmful as an active saboteur
+- shoutout @CarolineZhu for grinding out GTM, labelling hella data, and also making content
 
 [ferrofluid](ferrofluid-fixed.html) — an audio-reactive 3D ferrofluid MP3 player
 - made during a day I was insanely obsessed with ferrofluids, unfortunately I am not a MechE and building a ferrofluid speaker irl would be too hard so I made this instead
+- should probably smooth out some of the dancing blobs or make a dynamic ferrofluid that uses mediapipe to react to your head movements
 
 [veil](https://chromewebstore.google.com/detail/veil/lneibmllflnollbfbmdomcdibmnboamg?authuser=0&hl=en) — removing thumbnails and profile icons from youtube and replacing them with text
 - this was the first chrome extension I ever made, you learn very quickly that in order for anyone to be interested or want to download chrome extensions you need to make the title stupidly blunt. made this after I labelled too many channels for clarity and got sick of staring at ugly thumbnails
@@ -73,22 +75,41 @@ previous: d'annam white rice, one day taipei
 - the previous fragrances I no longer use would be perfect for someone who loves light academia, trust me on that
 
 *designers (aesthetically)*
-christophe lemaire, hengdi wang, jil sander, hedi slimane, ricardo tisci
+christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisci
 
 - if you like Uniqlo, you need to know that Christophe Lemaire is the person behind the entire Uniqlo U line. Lemaire is literally Uniqlo U but designer level in quality, fabrics, cut and color. 
 - Hengdi Wang is the only person who scratches my Dune itch, his clothes are actually surreal. if liquid chrome aespa is y3k, hengdi wang is y4k when we've built programmable clothing and become an interplanetary species
+- auralee is great, auralee is good. auralee would be perfect, IF THEY WOULD MAKE MORE CLOTHES IN BLACK
 - Jil Sander is simply clean. wow. if only the blazers didn't cost 5k a piece.
 - Hedi Slimane and Ricardo Tisci are the ones who inspired by affinity for all black clothing, and also made me pay what I previously thought was an obscene amount of money for clothes. if you respect art, try to get designer. you don't need it new, thrift most of this stuff anyways because they don't work for the same houses anymore and it's just not the same. 
 
----
+*music*
 
-**proof of influence**
+[interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713)
+- story: yearning
+
+[de riguer](https://open.spotify.com/playlist/25joSIRu2FhDW7FEsMGo7B?si=1374937d1c2b4e7c)
+- story: all or nothing. the brigher a star shines, the faster it's burning
+
+[nugaze](https://open.spotify.com/playlist/4ry66l9yXac9MTOMstG3tE?si=e0db3025b67041fa)
+- story: sunset at a random park in San Francisco thinking about the past
+
+[idlewild](https://open.spotify.com/playlist/7xr9doOPJ4RhgoG2FgB2ho?si=0da514ba9e514184)
+- story: late night drives, after hours at a bar, running through the streets laughing deliriously as the world spins in a million directions
+
+[shanghai](https://open.spotify.com/playlist/1Gpml8BWVwkicfreHAwKlm?si=ead7095a41a8477b)
+- story: soloing boutiques during the day, becoming one with the rhythm of a city
+
+*some content*
 
 [why not you — togi](https://www.youtube.com/watch?v=HsT_uVz2q38&t=3203s)
 - credit this one with pulling me out of a huge mental rut
+- you can just do things!
+- hilarious how the moment I actually stopped chasing other people's dreams and went off the deep end thinking about what I wanted to do if I was going to die in 90 days, everything clicked
 
 [russ hanneman pitch — silicon valley](https://www.youtube.com/watch?v=C0nIWMKfzGY)
 - even though he was talking to richard this was sage advice
+- biillionaire doors always sends me god I love this show
 
 ---
 
