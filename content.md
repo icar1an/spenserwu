@@ -93,8 +93,7 @@ christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisc
 - **shanghai**: soloing boutiques during the day, becoming one with the rhythm of a city.
 
 
-*some content*
-
+*inspiration*
 [why not you — togi](https://www.youtube.com/watch?v=HsT_uVz2q38&t=3203s)
 - credit this one with pulling me out of a huge mental rut
 - you can just do things!
