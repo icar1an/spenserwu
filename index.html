@@ -831,6 +831,11 @@
             color: #5f6368;
         }
 
+        /* Taste section: make italic category labels stand out */
+        .project-dropdown>summary i {
+            color: #202124;
+        }
+
         /* Comment */
         .comment-container {
             position: relative;
@@ -2083,7 +2088,11 @@
                 renderer.list = ({ items, ordered }) => {
                     const tag = ordered ? 'ol' : 'ul';
                     const className = ordered ? '' : ' class="project-details"';
-                    const body = items.map(item => `<li>${item.text}</li>`).join('');
+                    const body = items.map(item => {
+                        // Use parseInline to render bold, italic, links inside list items
+                        const html = marked.parseInline(item.text);
+                        return `<li>${html}</li>`;
+                    }).join('');
                     return `<${tag}${className}>${body}</${tag}>`;
                 };
 
