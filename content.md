@@ -84,21 +84,14 @@ christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisc
 - Hedi Slimane and Ricardo Tisci are the ones who inspired by affinity for all black clothing, and also made me pay what I previously thought was an obscene amount of money for clothes. if you respect art, try to get designer. you don't need it new, thrift most of this stuff anyways because they don't work for the same houses anymore and it's just not the same. 
 
 *music*
+[interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713), [de riguer](https://open.spotify.com/playlist/25joSIRu2FhDW7FEsMGo7B?si=1374937d1c2b4e7c), [nugaze](https://open.spotify.com/playlist/4ry66l9yXac9MTOMstG3tE?si=e0db3025b67041fa), [idlewild](https://open.spotify.com/playlist/7xr9doOPJ4RhgoG2FgB2ho?si=0da514ba9e514184), [shanghai](https://open.spotify.com/playlist/1Gpml8BWVwkicfreHAwKlm?si=ead7095a41a8477b)
 
-[interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713)
-- story: yearning
+- **interlude**: yearning.
+- **de riguer**: all or nothing. the brigher a star shines, the faster it's burning. 
+- **nugaze**: sunset at a random park in San Francisco thinking about the past.
+- **idlewild**: late night drives, after hours at a bar, running through the streets laughing deliriously as the world spins in a million directions.
+- **shanghai**: soloing boutiques during the day, becoming one with the rhythm of a city.
 
-[de riguer](https://open.spotify.com/playlist/25joSIRu2FhDW7FEsMGo7B?si=1374937d1c2b4e7c)
-- story: all or nothing. the brigher a star shines, the faster it's burning
-
-[nugaze](https://open.spotify.com/playlist/4ry66l9yXac9MTOMstG3tE?si=e0db3025b67041fa)
-- story: sunset at a random park in San Francisco thinking about the past
-
-[idlewild](https://open.spotify.com/playlist/7xr9doOPJ4RhgoG2FgB2ho?si=0da514ba9e514184)
-- story: late night drives, after hours at a bar, running through the streets laughing deliriously as the world spins in a million directions
-
-[shanghai](https://open.spotify.com/playlist/1Gpml8BWVwkicfreHAwKlm?si=ead7095a41a8477b)
-- story: soloing boutiques during the day, becoming one with the rhythm of a city
 
 *some content*
 
