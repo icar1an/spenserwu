@@ -45,7 +45,7 @@
 - this was the first chrome extension I ever made, you learn very quickly that in order for anyone to be interested or want to download chrome extensions you need to make the title stupidly blunt. made this after I labelled too many channels for clarity and got sick of staring at ugly thumbnails
 - hilarious how this actually reduced my youtube screentime greatly, good luck clickbaiting me now mr beast
 
-[jensenindex](https://jensenindex.onrender.com/) — a bloomberg terminal clone, but with leather jackets and NVDA ticker data
+[jensenindex](https://jensenindex.spenserwu.com) — a bloomberg terminal clone, but with leather jackets and NVDA ticker data
 - watched too many NVDA keynotes and bought a leather jacket, needed to quantify the relationship
 - another project heavily inspired by Riley Walz/MSCHF. you learn at first by copying the greats until you acquire your own sense
 
