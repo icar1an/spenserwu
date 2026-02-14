@@ -1,31 +1,32 @@
 **proof of agency**
 
 [arbicart](https://arbicart.spenserwu.com) — geoarb your groceries (hypothetically)
-- I've always been fascinated by price discrimination because it is the ultimate end game of late stage capitalism x enshittification of nice things for consumers. the idea of being able to charge people exactly what they're willing to pay and extracting maximum profit is just wow. then again if you dig up one of my old twitter posts you will realize that is a fantasy and does not work for most consumer goods (good luck charging mark zuckerberg 200k for airpods). should probably decide if I'm going to side with consumers or corpos on this one soon
+- I've always been fascinated by price discrimination because it is the ultimate end game of late stage capitalism x enshxttification of nice things for consumers. the idea of being able to charge people exactly what they're willing to pay and extracting maximum profit is just wow. then again for now this is a fantasy and does not work for most consumer goods (good luck charging mark zuckerberg 200k for airpods). should probably decide if I'm going to side with consumers or corpos on this one soon
 - really got started thinking about this months ago when I spoke to alum @SethSarelson, who sold his digital couponing company for an undisclosed amount of money. funny thing about price discrimination is that if it is presented in the form of a dynamic coupon, people who get different coupons don't feel ripped off even though they are being price discriminated against since they feel like the person who got the better coupon was more skilled (insane ikr)
 - he told me if you book your flights with terrible computers/cell phones in ZIP codes with lower median income, you can finesse better prices which absolutely blew my mind
-- this ties into another one of my theses, which is that any company like instacart that coordinates transportation of physical goods from retail to consumer or companies like uber that do ride hailing would obviously use what data they have to optimize prices in different regions
-- surprisingly when I explored the actual data, I found that wegmans charged the same prices through instacart no matter what region of ithaca I set my residency to (so so expensive to pay for apify in order to discover this)
+- theory: any company like instacart or uber obviously uses what data they have to optimize prices in different regions
+- surprisingly when I explored the actual data, I found that wegmans charged the same prices through instacart no matter what region of ithaca I set my residency to (so so expensive to pay for apify in order to discover this, think instacart has a secret markup somewhere but I don't want to violate ToS)
 - since I had already hard committed to the project at this point I figured it would be interesting to map the price of a basket of consumer goods in the Ithaca region cross zip codes to see if there was any meaningful price difference to exploit (spoilers: no. you would spend more on gas and opportunity cost than trying to geoarb your groceries)
 - however, this was a ton of fun to pull off and inspired several other projects I am going to work on. orchestrated the whole thing with running multiple agents in parallel thinking about running agent swarms, and also used designprompts.dev to make the website (shoutout @BenKoppe for putting me on game, loving the neo brutalism)
 
 [head.surf](https://head.surf) — scroll reels/tiktoks/shorts handlessly, surf any webapp 🏄‍♂️🏄‍♂️🏄‍♂️
-- the story behind this is insane. originally was working with @BenKoppe on adtech, but we got distracted by instagram reels during a roadblock. suddenly came up with a thesis: in the age where anyone can build anything, distribution is king. unless you have money to burn on marketing or are an influencer already/know ones willing to work for free in a relevant niche, you have to build products to enable repeatable content with virality potential. once you cultivate an audience, you ship your actual product
-- he agreed, and we spent a while thinking about what we could build which would look the most goofy on reels, to which I suggested someone playing the chrome dino game with their face. only thought of this because of this guy named @aaronka4n on reels who used CV to make scripts that fetched images/quizzes. if that's possible then there is no reason why you shouldn't be able to play the chrome game with your head. stuff like the arcteryx detector is a waste of DDR5 ram
-- quickly built a working prototype of the chrome dino game in 30 minutes, then immediately started working on making it work for subway surfers. we got it so good in one night that we went around campus doing user testing on random people at 1am. reception was crazy, it was my first time making a product that people actually WANTED. so addicting
-- ended up skipping class the next day to rapidly improve head mode with auto tracking + perfecting the sensitivity thresholds. this is also when I had the sage realization that if it works for subway surfers, you can scroll REELS with it too
+- the story behind this is insane. originally was working with @BenKoppe on adtech, but we got distracted by instagram reels during a roadblock. 
+- thesis: in the age where anyone can build anything, distribution is king. unless you have money to burn on marketing or are an influencer already/know ones willing to work for free in a relevant niche, you have to build products to enable repeatable content with virality potential. once you cultivate an audience, you ship your actual product
+- we spent a while thinking about what would look the most goofy on reels, to which I suggested someone playing the chrome dino game with their face. only thought of this because of this guy named @aaronka4n on reels who used CV to make scripts that fetched images/quizzes. if that's possible then there is no reason why you shouldn't be able to play the chrome game with your head. tbh stuff like the arcteryx detector is a waste of DDR5 ram
+- quickly built a working prototype of the chrome dino game in 30 minutes, then immediately started working on making it work for subway surfers. we got it so good in one night that we went around campus doing user testing on random people at 1am. reception was crazy, it was my first time making a product that people actually wanted. mildly dissapointed that of all things I made this was the one, but this is what makes building for consumer fun haha
+- ended up skipping class the next day to rapidly improve head mode with auto tracking + perfecting the sensitivity thresholds. this is also when I had the sage realization that if it works for subway surfers, you can scroll ig reels with it too lol
 - it was also really easy to test this product and perfect it by using it, since the way you that is by watching short form content/playing internet games to fine tune the settings
 - Ben got it into an auto updating dmg, we speedran the website and also started building gesturebinds + hand control modes using fingertip tracking. cue more UI/UX improvements through pure feeling and intuition for what a product like this should be like
 - built wink controls, auditory feedback (so so satisfying), and also ended up consolidating some of the detected modes
 - the beauty of headsurf is that it's so stupid the product literally markets itself. you can film infinite UGC by using it to scroll brainrot or play games in lectures, or even scroll multiple reels at once which is simply disgusting
-- in the process of rapidly building out the product, a new thesis came to mind. keyboards are reductivistic and need to be made obsolete. technology should not constrain our instincts, and instead be built around them. the keyboard has been around for less than 150 years, compared to gestures which we have been doing for over 10,000. you should be able to control any content on screens through pure head/hand movement without additional haptic hardware. 
+- thesis: keyboards are reductivistic and need to be made obsolete. technology should not constrain our instincts, and instead be built around them. the keyboard has been around for less than 150 years, compared to gestures which we have been doing for over 10,000. you should be able to control any content on screens through pure head/hand movement without additional haptic hardware. 
 - unironically this would be really great for accessibility. I will need it since my neck is beyond repair atp
 
 [mode](https://chromewebstore.google.com/detail/mode-fashion-discovery-re/bbgigkgmodajaobdfalekpaolpolebnm) - fashion tech thingy for chrome
-- if you follow me you'll know my eLab project was for fashiontech, but appdev on that front was a real pain and taking too long so I ended up shipping this to validate if the market wanted a product like this
-- the CTR on this is insane currently ranging from 2-6%, I'm guessing this is because when people use it (they don't know how to dress like a certain outfit/aesthetic) they have an incredibly malleable window in their head for product placements 
+- if you follow me you'll know my eLab project was for fashiontech, but appdev on that front was taking too long so I ended up shipping this to validate if the market wanted a product like this
+- the CTR on this is insane currently ranging from 2-6%, I'm guessing this is because when people use it (they don't know how to dress like a certain outfit/aesthetic) they have an incredibly malleable window in their head for product placements
 - it originally had terrible CTR but then I changed the highest price by default to 150 and sorted all fetched items from low to high, this came from the sage realization that someone with serious money would hire a stylist instead of downloading a chrome extension
-- new thesis: unless you have insane distribution/credibility in the industry, DO NOT try to build fashiontech. nobody needs the 2892 wardrobe/OOTD app or "tinder for clothes", just spend more money on clothes and learn how to get clothes from ebay/grailed/depop/vinted/vestaire collective/the realreal. you cannot shortcut the taste acquisition process, downloading apps to become more fashionable is like reading the sparknotes for tolstoy and expecting to be on par with someone who read the actual book. it's ridiculous, naive, and incredibly low signal
+- new thesis: unless you have insane distribution/credibility in the industry, DO NOT try to build fashiontech. nobody needs the 2892 wardrobe/OOTD app or "tinder for clothes", just spend more money on clothes and learn how to get clothes from ebay/grailed/depop/vinted/vestaire collective/the realreal. you cannot shortcut the taste acquisition process, downloading apps to become more fashionable is like reading the sparknotes for tolstoy and expecting to be on par with someone who read the actual book multiple times. it's ridiculous, naive, and incredibly low signal
 
 
 [clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — open source anti-ai slop chrome extension [whitepaper](Clarity%20Whitepaper.pdf) available now
@@ -75,8 +76,9 @@ previous: d'annam white rice, one day taipei
 - the previous fragrances I no longer use would be perfect for someone who loves light academia, trust me on that
 
 *designers (aesthetically)*
-christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisci
+ralph lauren,christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisci
 
+- ralph lauren is the GOAT. somehow makes clothes that basically everybody looks good in. 
 - if you like Uniqlo, you need to know that Christophe Lemaire is the person behind the entire Uniqlo U line. Lemaire is literally Uniqlo U but designer level in quality, fabrics, cut and color. 
 - Hengdi Wang is the only person who scratches my Dune itch, his clothes are actually surreal. if liquid chrome aespa is y3k, hengdi wang is y4k when we've built programmable clothing and become an interplanetary species
 - auralee is great, auralee is good. auralee would be perfect, IF THEY WOULD MAKE MORE CLOTHES IN BLACK
@@ -87,21 +89,11 @@ christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisc
 [interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713), [de riguer](https://open.spotify.com/playlist/25joSIRu2FhDW7FEsMGo7B?si=1374937d1c2b4e7c), [nugaze](https://open.spotify.com/playlist/4ry66l9yXac9MTOMstG3tE?si=e0db3025b67041fa), [idlewild](https://open.spotify.com/playlist/7xr9doOPJ4RhgoG2FgB2ho?si=0da514ba9e514184), [shanghai](https://open.spotify.com/playlist/1Gpml8BWVwkicfreHAwKlm?si=ead7095a41a8477b)
 
 - **interlude**: yearning.
-- **de riguer**: all or nothing. the brigher a star shines, the faster it's burning. 
-- **nugaze**: sunset at a random park in San Francisco thinking about the past.
+- **de riguer**: all or nothing. the brighter a star shines, the faster it's burning. 
+- **nugaze**: sunset at a random park in SF thinking about the past.
 - **idlewild**: late night drives, after hours at a bar, running through the streets laughing deliriously as the world spins in a million directions.
 - **shanghai**: soloing boutiques during the day, becoming one with the rhythm of a city.
 
-
-*unconventional inspiration*
-[why not you — togi](https://www.youtube.com/watch?v=HsT_uVz2q38&t=3203s)
-- credit this one with pulling me out of a huge mental rut
-- you can just do things!
-- hilarious how the moment I actually stopped chasing other people's dreams and went off the deep end thinking about what I wanted to do if I was going to die in 90 days, everything clicked
-
-[russ hanneman pitch — silicon valley](https://www.youtube.com/watch?v=C0nIWMKfzGY)
-- even though he was talking to richard this was sage advice
-- biillionaire doors always sends me god I love this show
 
 ---
 
