@@ -1361,6 +1361,272 @@
         .konami-mode .highlight {
             background: rgba(255, 255, 255, 0.3);
         }
+
+        /* ===== BROKEN TOOLBAR AESTHETIC ===== */
+
+        /* Toolbar container — slight tilt + crack overlay */
+        .toolbar {
+            transform: rotate(-0.8deg);
+            position: relative;
+            overflow: visible;
+            box-shadow: inset -3px -2px 6px rgba(0, 0, 0, 0.08), 2px 3px 8px rgba(0, 0, 0, 0.06);
+        }
+
+
+
+        /* Individual tool buttons — randomized damage via nth-child */
+        .tool-btn,
+        .tool-select {
+            transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+
+        .tool-btn:nth-child(4n+1) {
+            transform: rotate(-5deg) translateY(7px);
+            transform-origin: top center;
+        }
+
+        .tool-btn:nth-child(4n+2) {
+            transform: rotate(4deg) translateY(-3px);
+            transform-origin: top center;
+        }
+
+        .tool-btn:nth-child(4n+3) {
+            transform: rotate(-3deg) translateY(10px);
+            transform-origin: top center;
+        }
+
+        .tool-btn:nth-child(4n) {
+            transform: rotate(6deg) translateY(5px);
+            transform-origin: top left;
+        }
+
+        .tool-select:nth-child(odd) {
+            transform: rotate(-3deg) translateY(5px);
+            transform-origin: top center;
+        }
+
+        .tool-select:nth-child(even) {
+            transform: rotate(2.5deg) translateY(-2px);
+            transform-origin: top right;
+        }
+
+        /* Hero dangling buttons: Bold, Italic, Underline */
+        #boldBtn {
+            transform: rotate(-14deg) translateY(28px) !important;
+            transform-origin: top center;
+            filter: drop-shadow(3px 8px 6px rgba(0, 0, 0, 0.25));
+            animation: sway 3.2s ease-in-out infinite;
+            position: relative;
+        }
+
+
+
+        #italicBtn {
+            transform: rotate(10deg) translateY(32px) !important;
+            transform-origin: top center;
+            filter: drop-shadow(3px 10px 8px rgba(0, 0, 0, 0.28));
+            animation: sway 3.8s ease-in-out infinite;
+            animation-delay: -1.2s;
+            position: relative;
+        }
+
+
+
+        #underlineBtn {
+            transform: rotate(-9deg) translateY(22px) !important;
+            transform-origin: top center;
+            filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.2));
+            animation: sway 4.1s ease-in-out infinite;
+            animation-delay: -2.5s;
+            position: relative;
+        }
+
+
+
+        /* Tool dividers — bent/broken */
+        .tool-divider:nth-child(4n+1) {
+            transform: rotate(12deg);
+            opacity: 0.4;
+        }
+
+        .tool-divider:nth-child(6n) {
+            transform: rotate(-18deg) translateY(3px);
+            opacity: 0.25;
+        }
+
+        .tool-divider:nth-child(8n+3) {
+            opacity: 0;
+        }
+
+        /* Ruler — warped */
+        .ruler {
+            transform: skewX(-1.5deg);
+        }
+
+        .ruler-track {
+            clip-path: polygon(0 0, 100% 2px, 99% 100%, 1% 98%);
+        }
+
+        /* Header damage */
+        .doc-icon {
+            transform: rotate(5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .share-btn {
+            transform: rotate(-2deg) translateY(3px);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:nth-child(odd) {
+            transform: rotate(-1.2deg);
+        }
+
+        .menu-item:nth-child(even) {
+            transform: rotate(0.8deg) translateY(1px);
+        }
+
+        /* Drop shadows on dangling elements */
+        .tool-btn:nth-child(4n+3) {
+            filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.1));
+        }
+
+        /* Ambient sway animation — Bold */
+        @keyframes sway {
+
+            0%,
+            100% {
+                transform: rotate(-14deg) translateY(28px);
+            }
+
+            25% {
+                transform: rotate(-8deg) translateY(25px);
+            }
+
+            50% {
+                transform: rotate(-18deg) translateY(31px);
+            }
+
+            75% {
+                transform: rotate(-11deg) translateY(27px);
+            }
+        }
+
+        /* Italic has its own sway range */
+        #italicBtn {
+            animation-name: swayItalic;
+        }
+
+        @keyframes swayItalic {
+
+            0%,
+            100% {
+                transform: rotate(10deg) translateY(32px);
+            }
+
+            25% {
+                transform: rotate(16deg) translateY(29px);
+            }
+
+            50% {
+                transform: rotate(5deg) translateY(35px);
+            }
+
+            75% {
+                transform: rotate(13deg) translateY(31px);
+            }
+        }
+
+        /* Underline has its own sway range */
+        #underlineBtn {
+            animation-name: swayUnderline;
+        }
+
+        @keyframes swayUnderline {
+
+            0%,
+            100% {
+                transform: rotate(-9deg) translateY(22px);
+            }
+
+            25% {
+                transform: rotate(-4deg) translateY(19px);
+            }
+
+            50% {
+                transform: rotate(-14deg) translateY(25px);
+            }
+
+            75% {
+                transform: rotate(-7deg) translateY(21px);
+            }
+        }
+
+        /* Creak jolt animation — applied dynamically via JS */
+        @keyframes creak {
+            0% {
+                transform: rotate(var(--base-rot, 0deg)) translateY(var(--base-ty, 0px));
+            }
+
+            20% {
+                transform: rotate(calc(var(--base-rot, 0deg) + 6deg)) translateY(calc(var(--base-ty, 0px) - 2px));
+            }
+
+            40% {
+                transform: rotate(calc(var(--base-rot, 0deg) - 4deg)) translateY(calc(var(--base-ty, 0px) + 1px));
+            }
+
+            60% {
+                transform: rotate(calc(var(--base-rot, 0deg) + 2deg)) translateY(var(--base-ty, 0px));
+            }
+
+            100% {
+                transform: rotate(var(--base-rot, 0deg)) translateY(var(--base-ty, 0px));
+            }
+        }
+
+        .creaking {
+            animation: creak 0.4s ease-in-out !important;
+        }
+
+        /* Disable broken aesthetic on mobile */
+        @media (max-width: 900px) {
+            .toolbar {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .toolbar::before {
+                display: none;
+            }
+
+            .tool-btn,
+            .tool-select {
+                transform: none !important;
+                filter: none !important;
+                animation: none !important;
+            }
+
+            .tool-btn::before {
+                display: none !important;
+            }
+
+            .tool-divider {
+                transform: none !important;
+                opacity: 1 !important;
+            }
+
+            .ruler {
+                transform: none;
+            }
+
+            .doc-icon,
+            .share-btn,
+            .menu-item {
+                transform: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -2426,6 +2692,133 @@
         const ampm = hours >= 12 ? 'PM' : 'AM';
         const displayHours = hours % 12 || 12;
         document.getElementById('commentTime').textContent = `Today, ${displayHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+    </script>
+
+    <!-- Broken Toolbar: Proximity-based sway + ambient creak -->
+    <script>
+        (function () {
+            // Only run on desktop
+            if (window.innerWidth <= 900) return;
+
+            const toolbar = document.querySelector('.toolbar');
+            if (!toolbar) return;
+
+            const toolBtns = toolbar.querySelectorAll('.tool-btn, .tool-select');
+            const heroIds = new Set(['boldBtn', 'italicBtn', 'underlineBtn']);
+            const swayTargets = Array.from(toolBtns).filter(el => !heroIds.has(el.id));
+
+            // Per-icon current sway angle (smooth)
+            const currentAngles = new Float32Array(swayTargets.length);
+            const targetAngles = new Float32Array(swayTargets.length);
+
+            let mouseX = -9999;
+            let mouseY = -9999;
+            let lastMouseX = null;
+            let mouseVelX = 0;
+            let rafId = null;
+
+            const PROXIMITY_RADIUS = 150; // px — icons within this distance react
+            const MAX_ANGLE = 6; // degrees
+
+            function lerp(a, b, t) {
+                return a + (b - a) * t;
+            }
+
+            // Cache icon center positions (recalc on resize)
+            let iconRects = [];
+            function cacheRects() {
+                iconRects = swayTargets.map(el => {
+                    const r = el.getBoundingClientRect();
+                    return { cx: r.left + r.width / 2, cy: r.top + r.height / 2 };
+                });
+            }
+            cacheRects();
+            window.addEventListener('resize', cacheRects);
+
+            document.addEventListener('mousemove', function (e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+
+                // Compute horizontal velocity
+                if (lastMouseX !== null) {
+                    mouseVelX = e.clientX - lastMouseX;
+                }
+                lastMouseX = e.clientX;
+
+                // Decay velocity when mouse stops
+                clearTimeout(window._swayDecayTimer);
+                window._swayDecayTimer = setTimeout(function () {
+                    mouseVelX = 0;
+                    lastMouseX = null;
+                }, 100);
+
+                if (!rafId) animateSway();
+            });
+
+            function animateSway() {
+                let anyActive = false;
+
+                for (let i = 0; i < swayTargets.length; i++) {
+                    const rect = iconRects[i];
+                    if (!rect) continue;
+
+                    // Distance from mouse to icon center
+                    const dx = mouseX - rect.cx;
+                    const dy = mouseY - rect.cy;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    // Proximity falloff: 1.0 at cursor, 0.0 at PROXIMITY_RADIUS
+                    const proximity = Math.max(0, 1 - dist / PROXIMITY_RADIUS);
+
+                    // Target angle: velocity-based, scaled by proximity
+                    const velocityAngle = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, mouseVelX * 0.4));
+                    targetAngles[i] = velocityAngle * proximity;
+
+                    // Smooth lerp toward target
+                    currentAngles[i] = lerp(currentAngles[i], targetAngles[i], 0.1);
+
+                    // Apply transform only if meaningful
+                    if (Math.abs(currentAngles[i]) > 0.05) {
+                        const angle = currentAngles[i];
+                        swayTargets[i].style.transform = `rotate(${angle}deg) translateY(${Math.abs(angle) * 0.6}px)`;
+                        anyActive = true;
+                    } else {
+                        if (swayTargets[i].style.transform) {
+                            swayTargets[i].style.transform = '';
+                        }
+                        currentAngles[i] = 0;
+                    }
+                }
+
+                if (anyActive || mouseVelX !== 0) {
+                    rafId = requestAnimationFrame(animateSway);
+                } else {
+                    rafId = null;
+                }
+            }
+
+            // Ambient creak — random jolt every 8-15 seconds
+            function scheduleCreak() {
+                const delay = 8000 + Math.random() * 7000;
+                setTimeout(function () {
+                    if (window.innerWidth <= 900) {
+                        scheduleCreak();
+                        return;
+                    }
+                    const idx = Math.floor(Math.random() * swayTargets.length);
+                    const el = swayTargets[idx];
+                    if (el) {
+                        el.classList.add('creaking');
+                        el.addEventListener('animationend', function handler() {
+                            el.classList.remove('creaking');
+                            el.removeEventListener('animationend', handler);
+                        });
+                    }
+                    scheduleCreak();
+                }, delay);
+            }
+            scheduleCreak();
+        })();
     </script>
 </body>
 
