@@ -1,0 +1,3 @@
+# on skincare
+
+my general advice is to start from first principles. my skin is oily/rosacea prone and through much experimentation I found the best approach focuses on restoration and not suppressing symptoms. madecassoside + ceramides are king, the only brand that mixes them well with minimal irritation and fragrances is PKY. sunscreens round lab works pretty well, torriden is fine as well. about to try the haruharu black rice one perhaps it will be good? double cleaning is also super important, the muji oil is actually better than the manyo imo since it doesn't hurt if you get it in your eyes. FANCL is even better tho. to get rid of acne just use adapalene for a while, actually magic.
