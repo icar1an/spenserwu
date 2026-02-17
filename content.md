@@ -40,7 +40,7 @@
 
 ---
 
-**taste**
+**curation**
 
 *skincare*
 round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oil
@@ -52,7 +52,9 @@ previous: d'annam white rice, one day taipei
 *designers*
 ralph lauren, christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisci
 
-*music*
+---
+
+**music**
 
 [interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713) — yearning.
 
