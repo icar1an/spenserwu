@@ -2,7 +2,7 @@
 
 [arbicart](https://arbicart.spenserwu.com) — geographic grocery price arbitrage in ithaca
 
-[head.surf](https://head.surf) — scroll reels with your face
+[head.surf](https://head.surf) — doomscroll reels with your face
 
 [clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — chrome extension that filters AI slop from youtube · [whitepaper](Clarity%20Whitepaper.pdf)
 
@@ -50,21 +50,21 @@ current: edit(h) earl grey/diptyque philosykos
 previous: d'annam white rice, one day taipei
 
 *designers*
-ralph lauren, christophe lemaire, hengdi wang, jil sander, auralee, hedi slimane, ricardo tisci
+ralph lauren, christophe lemaire, jil sander, jw anderson, ricardo tisci
 
 ---
 
 **music**
 
-[interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713) — yearning.
+[interlude](https://open.spotify.com/playlist/5v1tMzsmgkl74RJqBQg6k6?si=9ba56265275f4713) — the sound of yearning.
 
-[de riguer](https://open.spotify.com/playlist/25joSIRu2FhDW7FEsMGo7B?si=1374937d1c2b4e7c) — all or nothing. the brighter a star shines, the faster it's burning.
+[de riguer](https://open.spotify.com/playlist/25joSIRu2FhDW7FEsMGo7B?si=1374937d1c2b4e7c) — all or nothing, pure unrestrained virtuosity.  
 
-[nugaze](https://open.spotify.com/playlist/4ry66l9yXac9MTOMstG3tE?si=e0db3025b67041fa) — sunset at a random park in SF thinking about the past.
+[nugaze](https://open.spotify.com/playlist/4ry66l9yXac9MTOMstG3tE?si=e0db3025b67041fa) — underrated music genre.
 
-[idlewild](https://open.spotify.com/playlist/7xr9doOPJ4RhgoG2FgB2ho?si=0da514ba9e514184) — late night drives, after hours at a bar, running through the streets laughing deliriously as the world spins in a million directions.
+[idlewild](https://open.spotify.com/playlist/7xr9doOPJ4RhgoG2FgB2ho?si=0da514ba9e514184) — music I associate with a very specific bar.
 
-[shanghai](https://open.spotify.com/playlist/1Gpml8BWVwkicfreHAwKlm?si=ead7095a41a8477b) — soloing boutiques during the day, becoming one with the rhythm of a city.
+[shanghai](https://open.spotify.com/playlist/1Gpml8BWVwkicfreHAwKlm?si=ead7095a41a8477b) — soloing boutiques during the day, merging with the rhythm of the city.
 
 ---
 
