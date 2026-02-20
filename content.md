@@ -1,8 +1,6 @@
 **projects**
 
-[arbicart](https://arbicart.spenserwu.com) — geographic grocery price arbitrage in ithaca
-
-[head.surf](https://head.surf) — doomscroll reels with your face
+[unserious ventures](unseriousventures.com) — artist collective
 
 [clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — chrome extension that filters AI slop from youtube · [whitepaper](Clarity%20Whitepaper.pdf)
 
