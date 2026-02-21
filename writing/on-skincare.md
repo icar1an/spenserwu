@@ -33,4 +33,20 @@ Another really important thing for my skin in general, or a massive win, was cer
 
 First principles, starting with ceramides, because there are, I think, three different types of ceramides that can nourish your skin barrier. I don't remember all of them off the top of my head, but they're great because they're just fatty lipids that go directly into your skin barrier. They absorb well, and if your skin's oily, you might think, "Wait, why would I put more ceramides onto my face? Shouldn't my face have enough?" Well, if you do put ceramides on your face, your skin will be moisturized and therefore will produce less oil, because producing oil is a reaction to your skin being a little dry. 
 
+Huge win for my oily skin was definitely doing double cleansing. You start by taking some oil so I used to use the Muji one. I switched to Manio and then now I'm going to use the fancl cleanser oil that's the one from Japan with minimal preservatives and you have to use it up within 90 days. That's probably the absolute best one that you can buy with your money.
 
+Anyway the point of oily skin is to go and really dissolve all the junk in yours, your pores, your sebum so to speak. Then you rub that into your face like upwards swirly motions. Just look up some K-beauty tutorial on how to do this and then you let it sit on your face for like 10-15 minutes.
+
+Then you go into the shower. You take some hot water and you forget what it's called, or you emulsify the oil so now you have this like white film on your face. You leave that on your face while you're showering, doing other things. Then you scrub that off once all of that's done. You could take another cleanser. Make sure you use something gentle. I really recommend the 1025 Dokdo cleanser from Round Lab. That one's really nourishing and great in general and doesn't over strip the moisture off your face. You can use the birch one but I really think the Dokdo one is the single best cleanser from that line. Also recommend this green mung bean cleanser. I completely forgot the brand but it comes in this always like B Young or something in this green tube. That one's also great as well and smells fantastic.
+
+There's another point: avoid fragrances in your skincare products. You want them to be minimally scented and if they are sent to just make sure that's the natural scent, not anything crazy, because that will definitely irritate your skin. You do not need scented skincare products. Remember this.
+
+Anyway after you gently exfoliate your face, you're basically set. That's double cleansing. After you come out of the shower you can hit your usual skincare routine with the toner, serum (whatever serum ended up working for you), cream, and then you're basically set. 
+
+I'd say sometimes it's nice to also use some sort of exfoliating cleanser, people I've had good with like with glycolic acid. That's an AHA, alpha hydroxy acid. You could also do BHA, which is salicylic. I like the Cosrx one, the birch tree salicylic one, quite great for smoothing out your skin.
+Just a few other random pointers:
+- Clay masks are great, especially if you have oily skin. Try to do those at least once a week after your shower, generally. They're great for getting rid of oil, sebum, and junk on your face, and some form of physical exfoliation is just great for your skin in general. Keeps it fresh.
+
+Trick for sheet masks: you can put some heavy ceramide cream on your face and then you take a sheet mask, like a hydrating one, and then you slap it over it.
+
+For hydration think about something like hyaluronic acid but be very careful with hyaluronic acid because if you apply it to dry skin, it will suck all the moisture out of your face. Make sure your face is damp before you apply a hyaluronic acid. That is how you lock in the moisture and get your face looking real smooth 
