@@ -1,13 +1,55 @@
 # on fashion
 
-ralph lauren is the GOAT. somehow makes clothes that basically everybody looks good in.
+I've never actually thought of myself as stylish or as someone who deeply understands clothing. But because people have asked me, I've decided to open up this section and dump all the knowledge I've accumulated over the past few years into one document. If anyone wants to save a bunch of time by not making the mistakes I did, feel free to just go off of what's here.
 
-if you like Uniqlo, you need to know that Christophe Lemaire is the person behind the entire Uniqlo U line. Lemaire is literally Uniqlo U but designer level in quality, fabrics, cut and color.
+The first and most important rule about clothing is realizing that if you want to look better, you need to spend more money. This makes sense on a very intuitive level: if you want better quality food, you pay more; if you want a nicer wine, you spend more. Obviously you can find some arbitrage opportunities — things that are higher quality than their price suggests, or vice versa, where you pay a lot for something that's not great quality. But in general, if you want to look better, the first step is to start spending more money.
 
-Hengdi Wang is the only person who scratches my Dune itch, his clothes are actually surreal. if liquid chrome aespa is y3k, hengdi wang is y4k when we've built programmable clothing and become an interplanetary species.
+If you buy all your clothing from Shein and Temu, that's fine. Try shopping at Uniqlo; you're going to look better. If you already shop at Uniqlo or H&M, think about stepping up to COS. But this is only if you're buying new. There are people who will only buy clothes new, to which I say you're missing out on a lot. Clothing is literally like a consumable — if you buy an item that's been worn ten, twenty times, you get it at a fraction of the cost and it's basically the same thing, just pre-broken in.
 
-auralee is great, auralee is good. auralee would be perfect, IF THEY WOULD MAKE MORE CLOTHES IN BLACK.
+I don't see what the big fuss about used clothing is, especially for an overcoat. Obviously don't buy stuff that directly touches your skin for extended periods of time, like underwear, but buying things like pants and jackets is completely fine. You're going to find the best stuff if you open your mind up to the possibility of buying older clothing.
 
-Jil Sander is simply clean. wow. if only the blazers didn't cost 5k a piece.
+A really important thing before you even start shopping is understanding your body type — your height, your weight, just how your body is in general. If you're planning on going to the gym and losing a bunch of weight, maybe don't spend that much money on clothing. Settle into a physique that you like and anticipate staying at for a while, and then make all your clothing purchasing decisions from there.
 
-Hedi Slimane and Ricardo Tisci are the ones who inspired by affinity for all black clothing, and also made me pay what I previously thought was an obscene amount of money for clothes. if you respect art, try to get designer. you don't need it new, thrift most of this stuff anyways because they don't work for the same houses anymore and it's just not the same.
+I've been through phases where I was bulking up like crazy, cutting like crazy, and that made shopping for clothes a royal pain because something that fits perfectly in the waist could be too large or too small three or four months from now based on my eating habits. I've decided to maintain more of a leaner physique, and that's opened a lot more doors in fashion.
+
+Side note: many clothing brands are built for slimmer people, and generally you just look better in clothes if you are slimmer. This is fact. Some designers take this to an extreme — like Hedi Slimane, the guy literally makes heroin chic clothing for people who essentially look like they have anorexia. Side effect: the clothes are razor sharp and you achieve this incredible silhouette. But I can't do it, even though I love that aesthetic. I just don't have the body type for it. My midsection is too large, my legs too thick — it's not going to work. Understanding your body type, remember this, is king when it comes to finding good clothing.
+
+Now, the silhouette. The silhouette that looks good on you usually has everything to do with your body type. A really good place to start: take any AI model, tell it to pretend to be a stylist, and upload a few pictures of yourself. It'll analyze you and suggest what silhouettes would look good on you. This is great because AI is essentially a super abstract pattern matching machine — it's already been trained on millions of images and stylist commentary about what looks good on people of your body type. Just leverage that.
+
+The second step is understanding how silhouettes are paired together. Think about it: slim top with wider bottoms, or wide top with wide bottoms. Never do something like a wide baggy top with slim bottoms — that looks incredibly terrible. But vice versa actually does look good. Understand layering, how you stack items on top of each other. Don't buy jackets that are a little too short with your shirt sticking out underneath. Don't wear oversized things under slim fit things. If you don't want to be bothered thinking about this, just maintain the same style of fit across all your clothes. If you're buying everything regular fit, slim fit, or oversized, just keep it all consistent and don't mix and match too much. It's going to look decent, but don't take it too far — if you exaggerate anything in fashion, it just doesn't look great. It looks like you're trying to be something you're not.
+
+After silhouette, you need to understand material quality. Unless it's specifically workout clothing, try to avoid synthetics — they usually harden up in the wash, and it's just not that great. Buy things in natural fibers. You'll definitely develop your own preferences for fabric types: different wools, different weaves, different textures. Just really experiment here.
+
+A good way to do this is to go thrifting or go to a store and not buy anything — just observe. See what makes sense to you, what looks good on you. You need to build this sense, and this taste acquisition process cannot be skipped.
+
+You can hire a stylist, but then you're going to end up outsourcing all your fashion decisions to somebody else. Maybe that'll clear up your mind. To me, clothing is ultimately an expression of who you are. You really get to take what's on the inside and show people on the outside who you are, how you present yourself, how you care for yourself in the world. If you outsource such an important piece of your humanity to somebody else — I mean, maybe for certain special occasions, but day-to-day I like to be in charge of what I'm wearing. That's one of the first decisions I make every day. Having control over that is really beneficial for me.
+
+If you're reading this, you probably care about that too, so try to acquire taste for yourself. Your tastes are going to change — that is normal, that is fine. It's why I suggest buying clothing used, because if you don't like it you can just resell it. This is really only true for certain types of designer clothing, so you're going to end up spending a bit more in the beginning when you're going through your taste acquisition process.
+
+Fast fashion isn't necessarily the worst thing, because it gives you a really quick rough idea of what looks good and what doesn't look good on you. Just in general try to avoid it. Once you've settled into more timeless things and you don't want to spend too much time on fashion, you're fine with just wearing a slightly more boring but more timeless wardrobe and sticking to basics.
+
+From there, I'd say it's totally fine to start scaling up — going to places like Grailed and The RealReal and buying used Auralee, used Jil Sander, used Lemaire, used Ralph Lauren. Relatively timeless brands with classic, no-logo silhouettes. Get them in neutral colors and it's always just going to look good together, very clean. You're not going to have any issues there.
+
+Ultimately, when you start buying clothing at a higher level, you'll realize that there actually is a point to designer clothing. A designer is the person whose original vision gets distilled directly into the clothes. I took a class on fashion here at Cornell. Apparently big designers do Haute Couture, which is essentially custom clothing for people spending what you would consider to be an obscene amount of money. I see it as some form of art but also luxury Veblen good madness.
+
+That vision gets distilled down through the masses, and by the time you buy a piece of clothing from H&M, it's nothing like the original. It might be a cheap imitation, but when you're always copying, you never end up getting 100% of the source material. It's very rare that a copy exceeds the quality of the original.
+
+I'm not going to shit on Uniqlo here because Uniqlo actually does have an in-house atelier team, so the stuff they produce is proportionately some of the best value for money you can buy. Even though I've gradually accumulated some nicer things, I still buy stuff from Uniqlo because Uniqlo is honestly the GOAT. Maybe don't get all your clothes from there, but having a few pairs of pants, tops, and inner consumable items from Uniqlo is completely fine. Don't stress about it.
+
+Now, let's go into some specific designers.
+
+The entire Uniqlo U line is made by Christophe Lemaire, who runs Lemaire with his wife and partner. Very interesting designer — Lemaire is literally Uniqlo U but at designer level in quality, fabrics, cut, and color.
+
+Ralph Lauren is the GOAT. He just makes incredibly timeless clothing that looks great on everybody. Auralee is also good, but I don't like most of the non-neutral stuff. The quality, however, is just insane.
+
+If you're into science fiction, you'd probably like Hengdi Wang. He's a Chinese designer who makes some of the coolest clothing I've ever seen. I forgot which collection it was, but I think it was Spring/Summer 25 — "Cybernetics Blooming Inside Me." Fantastic work. If liquid chrome Aespa is Y3K, Hengdi Wang is Y4K, when we've built programmable clothing and become an interplanetary species.
+
+Obviously the classics: Hedi Slimane and Riccardo Tisci. These people literally redefined fashion. Hedi Slimane made slim fit great again, and Riccardo Tisci brought streetwear to luxury. The entirety of that loud designer era from like 2016 onward was essentially because of Riccardo — very cool stuff. If you respect art, try to get designer. You don't need it new; thrift most of this stuff anyway, because they don't work for the same houses anymore and it's just not the same.
+
+Some fashion heads reading this are probably going to disagree with some of my opinions. I definitely do not know enough about this field — there are entire collections I'm not mentioning here, works by Raf Simons, Undercover, Jun Takahashi, and Yohji Yamamoto. I could go down a rabbit hole, but honestly I don't see the point.
+
+Now, I just buy all my clothing in black. And some white — essentially pure black and white monochrome. I've gotten questions like, "Oh, isn't this so restrictive? You're missing out on some great items." But it's nice that you can just filter out everything that isn't black, and it usually all goes great together.
+
+Even when you completely remove color from your wardrobe, you end up with these interesting combinations where you get to focus more of your time on silhouette, texture, and material. It really frees my mind up because I don't even have to think about color harmony — I can just assume everything has some base level of compatibility. Being able to spend all my time thinking about silhouette and how I structure my outfit has been really liberating.
+
+I do suggest going all black to people who are willing to try. It's a gradual process though. Don't throw away all your clothes overnight.

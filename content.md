@@ -16,17 +16,13 @@
 
 ---
 
-**writing**
+**thoughts**
 
 [on price discrimination and grocery arbitrage](#writing/on-price-discrimination)
 
 [on building for virality](#writing/on-building-for-virality)
 
 [on AI slop and incentive design](#writing/on-ai-slop)
-
-[on fashion tech](#writing/on-fashion-tech)
-
-[on keyboards and gesture interfaces](#writing/on-keyboards)
 
 [on skincare](#writing/on-skincare)
 
