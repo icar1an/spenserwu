@@ -40,18 +40,14 @@
 
 **curation**
 
-*skincare*
-
+*skincare*  
 round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oil
 
-*fragrance*
-
-current: edit(h) earl grey/diptyque philosykos
-
+*fragrance*  
+current: edit(h) earl grey/diptyque philosykos  
 previous: d'annam white rice, one day taipei
 
-*designers*
-
+*designers*  
 ralph lauren, christophe lemaire, jil sander, jw anderson, ricardo tisci
 
 ---
