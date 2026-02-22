@@ -1,6 +1,6 @@
 **projects**
 
-[unserious ventures](https://unseriousventures.com) — artist collective
+[unserious ventures](https://unseriousventures.com) — freedom
 
 [clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) — chrome extension that filters AI slop from youtube · [whitepaper](Clarity%20Whitepaper.pdf)
 
