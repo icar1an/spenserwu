@@ -2245,7 +2245,7 @@
                 renderer.hr = () => '<p></p>';
 
                 // Use the renderer with marked.use() for v5+ compatibility
-                marked.use({ renderer });
+                marked.use({ renderer, breaks: true });
 
                 const htmlContent = marked.parse(markdown);
                 const container = document.getElementById('markdown-content');
