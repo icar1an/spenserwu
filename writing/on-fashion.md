@@ -1,6 +1,6 @@
 # on fashion
 
-I've never actually thought of myself as stylish or as someone who deeply understands clothing. But because people have asked me, I've decided to open up this section and dump all the knowledge I've accumulated over the past few years into one document. If anyone wants to save a bunch of time by not making the mistakes I did, feel free to just go off of what's here.
+I've decided to dump all the knowledge I've accumulated about clothes over the past few years into one document. If anyone wants to save a bunch of time by not making the mistakes I did, feel free to just go off of what's here.
 
 The first and most important rule about clothing is realizing that if you want to look better, you need to spend more money. This makes sense on a very intuitive level: if you want better quality food, you pay more; if you want a nicer wine, you spend more. Obviously you can find some arbitrage opportunities — things that are higher quality than their price suggests, or vice versa, where you pay a lot for something that's not great quality. But in general, if you want to look better, the first step is to start spending more money.
 

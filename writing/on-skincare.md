@@ -1,6 +1,6 @@
 # on skincare
 
-I've already been asked by multiple people to un-gatekeep everything I've learned about skincare and help them with product recommendations. This is the best way to democratize all my knowledge, because gatekeeping things is for losers.
+I've already been asked by n>1 people to un-gatekeep everything I've learned about skincare and help them with product recommendations. This is the best way to democratize all my knowledge, because gatekeeping things are for losers.
 
 Let's start with the basics. The first and most important thing about skincare is understanding your skin type. You can spend all the money on products, get fancy treatments, do everything you could possibly do with money, and still completely mess up because you don't understand your skin type. There are a few different ones:
 
