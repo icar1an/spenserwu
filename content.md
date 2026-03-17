@@ -2,33 +2,9 @@
 
 [unserious ventures](https://unseriousventures.com)
 
-[clarity](https://chromewebstore.google.com/detail/clarity-hide-ai-videos-on/gjngfjkebjejpaagdlbkdibdameiolfk) · [whitepaper](Clarity%20Whitepaper.pdf)
-
-[mode](https://chromewebstore.google.com/detail/mode-fashion-discovery-re/bbgigkgmodajaobdfalekpaolpolebnm)
-
-[ferrofluid](ferrofluid-fixed.html)
-
-[veil](https://chromewebstore.google.com/detail/veil/lneibmllflnollbfbmdomcdibmnboamg?authuser=0&hl=en)
-
-[jensenindex](https://jensenindex.spenserwu.com)
-
-[heartpv](https://heartpv.spenserwu.com)
-
 ---
 
 **thoughts**
-
-[on price discrimination and grocery arbitrage](#writing/on-price-discrimination)
-
-[on building for virality](#writing/on-building-for-virality)
-
-[on AI slop and incentive design](#writing/on-ai-slop)
-
-[on skincare](#writing/on-skincare)
-
-[on fragrance](#writing/on-fragrance)
-
-[on fashion](#writing/on-fashion)
 
 [daymare](#writing/daymare)
 
@@ -39,12 +15,11 @@
 *skincare*  
 round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oil
 
-*fragrance*  
-current: edit(h) earl grey/diptyque philosykos  
-previous: d'annam white rice, one day taipei
+*fragrance*
+current: chanel sycomore
 
 *designers*  
-ralph lauren, christophe lemaire, jil sander, jw anderson, ricardo tisci
+jil sander, ricardo tisci
 
 ---
 
