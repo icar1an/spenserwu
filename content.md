@@ -37,4 +37,4 @@ lady white co, jil sander
 
 ---
 
-[email](mailto:spenser.f.wu@gmail.com) · [x](https://x.com/kytherax) · [instagram](https://www.instagram.com/spensewu/) · [github](https://github.com/icar1an) · [steal my clothes](https://www.grailed.com/icarian) · [linkedin](https://www.linkedin.com/)
+[email](mailto:spenser.f.wu@gmail.com) · [x](https://x.com/kytherax) · [instagram](https://www.instagram.com/spensewu/) · [github](https://github.com/icar1an) · [steal my clothes](https://www.grailed.com/icarian) · [linkedin](https://www.linkedin.com/in/spenserwu/)
