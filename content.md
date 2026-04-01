@@ -19,7 +19,7 @@ round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oi
 current: chanel sycomore
 
 *designers*  
-jil sander, ricardo tisci
+lady white co, jil sander
 
 ---
 
@@ -37,4 +37,4 @@ jil sander, ricardo tisci
 
 ---
 
-[email](mailto:spenser.f.wu@gmail.com) · [x](https://x.com/kytherax) · [instagram](https://www.instagram.com/spensewu/) · [github](https://github.com/icar1an) · [steal my clothes](https://www.grailed.com/icarian)
+[email](mailto:spenser.f.wu@gmail.com) · [x](https://x.com/kytherax) · [instagram](https://www.instagram.com/spensewu/) · [github](https://github.com/icar1an) · [steal my clothes](https://www.grailed.com/icarian) · [linkedin](https://www.linkedin.com/)
