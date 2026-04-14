@@ -16,10 +16,19 @@
 round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oil
 
 *fragrance*
-current: chanel sycomore
+current: bdk gris charnel
 
 *designers*  
-lady white co, jil sander
+lady white co, new balance, jil sander
+
+*edc*  
+secrid fluted cardholder in silver, b&o beosound a1 gen 2
+
+---
+
+**books**
+
+either/or, tao te ching
 
 ---
 
