@@ -16,6 +16,7 @@
     <link rel="icon" href="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -837,84 +838,6 @@
         }
 
         /* Comment */
-        .comment-container {
-            position: relative;
-        }
-
-        .comment {
-            position: absolute;
-            left: calc(100% + 48px);
-            top: 0;
-            width: 280px;
-            background: #fff;
-            border: 1px solid #dadce0;
-            border-radius: 8px;
-            padding: 12px 16px;
-            font-size: 13px;
-            line-height: 1.4;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .comment:hover {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .comment-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        .comment-avatar {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: #1a73e8;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-
-        .comment-meta {
-            flex: 1;
-        }
-
-        .comment-author {
-            font-weight: 500;
-            font-size: 13px;
-            color: #202124;
-        }
-
-        .comment-time {
-            font-size: 11px;
-            color: #5f6368;
-        }
-
-        .comment-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .highlight {
-            background: #fce8b2;
-        }
-
-        @media (max-width: 1300px) {
-            .comment {
-                display: none;
-            }
-
-            .highlight {
-                background: transparent;
-            }
-        }
 
         /* Dropdown menus */
         .dropdown {
@@ -1627,6 +1550,97 @@
                 transform: none !important;
             }
         }
+        /* ===== Interactive flourishes ===== */
+
+        /* Falling toolbar icons (Matter.js-driven) */
+        .fall-layer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1500;
+        }
+
+        .fall-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444746;
+            will-change: transform;
+        }
+
+        .fall-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .tool-btn.fallen {
+            visibility: hidden;
+        }
+
+        .tool-btn.undo-live {
+            color: #1a73e8;
+            cursor: pointer;
+            animation: undoPulse 1.6s ease-in-out infinite;
+        }
+
+        @keyframes undoPulse {
+            0%, 100% { opacity: 0.65; }
+            50% { opacity: 1; }
+        }
+
+        /* Scroll-reveal for document sections */
+        .reveal {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Ambient collaborator cursors */
+        .ghost-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            animation: ghostIn 1s ease forwards;
+            will-change: transform;
+        }
+
+        .ghost-label {
+            color: #fff;
+            font: 600 11px 'Google Sans', Arial, sans-serif;
+            padding: 1px 7px;
+            border-radius: 9px;
+            white-space: nowrap;
+            margin-left: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes ghostIn {
+            to { opacity: 0.9; }
+        }
+
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .ghost-cursor { display: none !important; }
+        }
     </style>
 </head>
 
@@ -2265,6 +2279,9 @@
                         await openWritingEntry(entryPath, entryName);
                     });
                 });
+
+                // Animate document sections into view
+                if (window.initScrollReveal) window.initScrollReveal();
             } catch (error) {
                 console.error('Error loading markdown content:', error);
                 // Fallback: show error message
@@ -2572,13 +2589,6 @@
         }
         fetchLastEdit();
 
-        // Set comment time dynamically
-        const now = new Date();
-        const hours = now.getHours();
-        const minutes = now.getMinutes();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        const displayHours = hours % 12 || 12;
-        document.getElementById('commentTime').textContent = `Today, ${displayHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
     </script>
 
     <!-- Broken Toolbar: Proximity-based sway + ambient creak -->
@@ -2586,6 +2596,8 @@
         (function () {
             // Only run on desktop
             if (window.innerWidth <= 900) return;
+            // Respect reduced-motion preference
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
             const toolbar = document.querySelector('.toolbar');
             if (!toolbar) return;
@@ -2648,6 +2660,11 @@
                 for (let i = 0; i < swayTargets.length; i++) {
                     const rect = iconRects[i];
                     if (!rect) continue;
+                    // Skip icons that have fallen off the toolbar
+                    if (swayTargets[i].classList.contains('fallen')) {
+                        if (swayTargets[i].style.transform) swayTargets[i].style.transform = '';
+                        continue;
+                    }
 
                     // Distance from mouse to icon center
                     const dx = mouseX - rect.cx;
@@ -2694,7 +2711,7 @@
                     }
                     const idx = Math.floor(Math.random() * swayTargets.length);
                     const el = swayTargets[idx];
-                    if (el) {
+                    if (el && !el.classList.contains('fallen')) {
                         el.classList.add('creaking');
                         el.addEventListener('animationend', function handler() {
                             el.classList.remove('creaking');
@@ -2705,6 +2722,207 @@
                 }, delay);
             }
             scheduleCreak();
+        })();
+    </script>
+
+    <!-- Buttery flourishes: falling icons, ambient cursors, scroll reveal -->
+    <script>
+        (function () {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isDesktop = window.innerWidth > 900;
+
+            /* ---------- Scroll reveal ---------- */
+            window.initScrollReveal = function () {
+                const container = document.getElementById('markdown-content');
+                if (!container) return;
+                const blocks = Array.from(container.children);
+                if (reduceMotion || !('IntersectionObserver' in window)) {
+                    blocks.forEach(b => b.classList.add('reveal', 'revealed'));
+                    return;
+                }
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach(en => {
+                        if (en.isIntersecting) {
+                            en.target.classList.add('revealed');
+                            io.unobserve(en.target);
+                        }
+                    });
+                }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
+                blocks.forEach((b, i) => {
+                    b.classList.add('reveal');
+                    b.style.transitionDelay = Math.min(i * 35, 280) + 'ms';
+                    io.observe(b);
+                });
+            };
+
+            /* ---------- Ambient collaborator cursors ---------- */
+            (function ghostCursors() {
+                if (reduceMotion || !isDesktop) return;
+                const ghosts = [
+                    { name: 'Anonymous Otter', color: '#f4b400' },
+                    { name: 'Anonymous Heron', color: '#db4437' }
+                ].map((g, i) => {
+                    const el = document.createElement('div');
+                    el.className = 'ghost-cursor';
+                    el.style.animationDelay = (2 + i * 1.5) + 's';
+                    el.innerHTML =
+                        '<svg viewBox="0 0 24 24" width="18" height="18" style="filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))">' +
+                        '<path fill="' + g.color + '" d="M5 2l14 7-6 1.5 3.5 6.5-2.6 1.2-3.4-6.5L5 17z"/></svg>' +
+                        '<span class="ghost-label" style="background:' + g.color + '">' + g.name + '</span>';
+                    document.body.appendChild(el);
+                    return {
+                        el,
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        tx: 0, ty: 0, pause: 0
+                    };
+                });
+                function retarget(o) {
+                    o.tx = window.innerWidth * (0.12 + Math.random() * 0.72);
+                    o.ty = window.innerHeight * (0.14 + Math.random() * 0.66);
+                }
+                ghosts.forEach(retarget);
+                function tick() {
+                    for (const o of ghosts) {
+                        if (o.pause > 0) {
+                            o.pause--;
+                        } else {
+                            o.x += (o.tx - o.x) * 0.018;
+                            o.y += (o.ty - o.y) * 0.018;
+                            if (Math.hypot(o.tx - o.x, o.ty - o.y) < 6) {
+                                o.pause = 40 + Math.random() * 110;
+                                retarget(o);
+                            }
+                        }
+                        o.el.style.transform = 'translate(' + o.x + 'px,' + o.y + 'px)';
+                    }
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            })();
+
+            /* ---------- Falling toolbar icons (Matter.js) ---------- */
+            (function fallingIcons() {
+                if (reduceMotion || !isDesktop) return;
+                if (typeof Matter === 'undefined') return; // CDN unavailable: leave toolbar untouched
+                const toolbar = document.querySelector('.toolbar');
+                if (!toolbar) return;
+                const droppable = Array.from(toolbar.querySelectorAll('.tool-btn'))
+                    .filter(el => el.id !== 'undoBtn');
+                if (!droppable.length) return;
+
+                const engine = Matter.Engine.create({ enableSleeping: true });
+                engine.gravity.y = 1.1;
+
+                function W() { return window.innerWidth; }
+                function H() { return window.innerHeight; }
+                const wallOpt = { isStatic: true, restitution: 0.2, friction: 0.9 };
+                const floor = Matter.Bodies.rectangle(W() / 2, H() + 30, W() * 3, 60, wallOpt);
+                const leftWall = Matter.Bodies.rectangle(-30, H() / 2, 60, H() * 4, wallOpt);
+                const rightWall = Matter.Bodies.rectangle(W() + 30, H() / 2, 60, H() * 4, wallOpt);
+                Matter.World.add(engine.world, [floor, leftWall, rightWall]);
+
+                const layer = document.createElement('div');
+                layer.className = 'fall-layer';
+                document.body.appendChild(layer);
+
+                const pairs = [];
+                let rafId = null;
+                let last = performance.now();
+
+                function loop(now) {
+                    // Clamp to a single 60fps step: stable integration + no Matter delta warnings
+                    const dt = Math.min(1000 / 60, now - last);
+                    last = now;
+                    Matter.Engine.update(engine, dt);
+                    for (const p of pairs) {
+                        p.clone.style.transform =
+                            'translate(' + (p.body.position.x - p.w / 2) + 'px,' +
+                            (p.body.position.y - p.h / 2) + 'px) rotate(' + p.body.angle + 'rad)';
+                    }
+                    if (pairs.length && pairs.every(p => p.body.isSleeping)) {
+                        rafId = null; // everything settled — stop burning frames
+                        return;
+                    }
+                    rafId = requestAnimationFrame(loop);
+                }
+                function startLoop() {
+                    if (!rafId) { last = performance.now(); rafId = requestAnimationFrame(loop); }
+                }
+
+                const undoBtn = document.getElementById('undoBtn');
+                function setUndo(on) {
+                    if (!undoBtn) return;
+                    undoBtn.classList.toggle('disabled', !on);
+                    undoBtn.classList.toggle('undo-live', on);
+                    undoBtn.title = on ? 'Put the icons back (Ctrl+Z)' : 'Undo (Ctrl+Z)';
+                }
+
+                function dropIcon(el) {
+                    if (el.classList.contains('fallen')) return;
+                    const r = el.getBoundingClientRect();
+                    const clone = el.cloneNode(true);
+                    clone.classList.remove('tool-btn', 'fallen', 'disabled');
+                    clone.classList.add('fall-icon');
+                    clone.removeAttribute('id');
+                    clone.removeAttribute('title');
+                    clone.style.width = r.width + 'px';
+                    clone.style.height = r.height + 'px';
+                    layer.appendChild(clone);
+                    el.classList.add('fallen'); // keeps its slot (visibility:hidden), no reflow
+
+                    const body = Matter.Bodies.rectangle(
+                        r.left + r.width / 2, r.top + r.height / 2, r.width, r.height,
+                        { restitution: 0.45, friction: 0.6, frictionAir: 0.012, density: 0.0014 }
+                    );
+                    Matter.Body.setVelocity(body, { x: (Math.random() - 0.5) * 6, y: -3 - Math.random() * 3 });
+                    Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.32);
+                    Matter.World.add(engine.world, body);
+                    pairs.push({ el, clone, body, w: r.width, h: r.height });
+                    setUndo(true);
+                    startLoop();
+                }
+
+                function restoreAll() {
+                    if (!pairs.length) return;
+                    for (const p of pairs) {
+                        Matter.World.remove(engine.world, p.body);
+                        const o = p.el.getBoundingClientRect();
+                        p.clone.style.transition =
+                            'transform 0.6s cubic-bezier(0.22,1,0.36,1), opacity 0.5s ease';
+                        // double-rAF so the transition picks up from the current transform
+                        requestAnimationFrame(() => requestAnimationFrame(() => {
+                            p.clone.style.transform = 'translate(' + o.left + 'px,' + o.top + 'px) rotate(0rad)';
+                            p.clone.style.opacity = '0';
+                        }));
+                        p.clone.addEventListener('transitionend', function done() {
+                            p.el.classList.remove('fallen');
+                            p.clone.remove();
+                        }, { once: true });
+                    }
+                    pairs.length = 0;
+                    setUndo(false);
+                    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+                }
+
+                // Capture phase: a click knocks the icon off instead of firing its action
+                toolbar.addEventListener('click', function (e) {
+                    const btn = e.target.closest('.tool-btn');
+                    if (!btn || btn.id === 'undoBtn') return;
+                    if (!droppable.includes(btn) || btn.classList.contains('fallen')) return;
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropIcon(btn);
+                }, true);
+
+                if (undoBtn) undoBtn.addEventListener('click', restoreAll);
+
+                window.addEventListener('resize', function () {
+                    Matter.Body.setPosition(floor, { x: W() / 2, y: H() + 30 });
+                    Matter.Body.setPosition(rightWall, { x: W() + 30, y: H() / 2 });
+                    startLoop();
+                });
+            })();
         })();
     </script>
 </body>
