@@ -13,16 +13,13 @@
 **curation**
 
 *skincare*  
-round lab birch sunscreen, adapalene, PKY calming cream/balm, FANCL cleansing oil
+haruharu black rice airyfit, adapalene, PKY calming cream/balm, FANCL cleansing oil
 
 *fragrance*
-current: bdk gris charnel
+undecided
 
-*designers*  
-lady white co, new balance, jil sander
-
-*edc*  
-secrid fluted cardholder in silver, b&o beosound a1 gen 2
+*clothing*  
+lady white co, helmut lang, jil sander
 
 ---
 
